@@ -73,11 +73,20 @@ def render_morning_star_scan_table(signals):
         lines.append("| _None_ | No confirmed Morning Star setups today | | | | | |")
         return "\n".join(lines)
     for s in signals:
+        ticker_label = s["ticker"]
+        if s.get("entry_mode") == "intraday_probable":
+            ticker_label += " ⚠︎"
         lines.append(
-            f"| {s['ticker']} | ${s['day1_close']:.2f} | ${s['day2_low']:.2f} | "
+            f"| {ticker_label} | ${s['day1_close']:.2f} | ${s['day2_low']:.2f} | "
             f"${s['day3_close']:.2f} | {s['shares']} shares | ${s['stop_loss']:.2f} | "
             f"${s['target_price']:.2f} |"
         )
+    if any(s.get("entry_mode") == "intraday_probable" for s in signals):
+        lines.append("")
+        lines.append("⚠︎ = intraday entry ~15 min before close, on an UNCONFIRMED "
+                      "still-forming Day 3 candle (heuristic probability estimate, "
+                      "not a settled close). Day 3 Close and Stop Loss are a "
+                      "near-close snapshot, not final values.")
     return "\n".join(lines)
 
 

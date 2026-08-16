@@ -206,6 +206,59 @@ def detect_morning_star(df, downtrend_lookback=5):
     }
 
 
+def detect_morning_star_setup(df, downtrend_lookback=5):
+    """Checks ONLY Day 1 (tall bearish) + Day 2 (small indecision star) of a
+    potential Morning Star, using the two most recent COMPLETED daily bars —
+    it does not require Day 3 to exist yet. Use this the evening before a
+    trading session to build a watchlist of tickers where the next session
+    could complete the pattern. Returns {"day1", "day2", "day1_midpoint",
+    "day1_body"} or None.
+    """
+    if len(df) < downtrend_lookback + 2:
+        return None
+    closes = list(df["close"])
+    trend_closes = closes[:-1]
+    downtrend = is_downtrend(trend_closes, downtrend_lookback)
+    if not downtrend:
+        return None
+
+    day1, day2 = df.iloc[-2], df.iloc[-1]
+    c1, c2 = _candle(day1), _candle(day2)
+    if not (
+        c1.is_bearish
+        and c1.body >= 0.6 * c1.range
+        and c2.body <= 0.3 * c1.body + 1e-9
+        and max(c2.open, c2.close) < c1.close
+    ):
+        return None
+    return {"day1": day1, "day2": day2, "day1_midpoint": c1.midpoint, "day1_body": c1.body}
+
+
+def morning_star_day3_probable(day1_midpoint, day1_body, today_open, today_current_price,
+                                buffer_fraction=0.10):
+    """HEURISTIC ONLY — estimates whether today's still-forming candle looks
+    on track to complete a Morning Star, for use ~15 minutes before close so
+    an order can be placed same-day instead of waiting for the confirmed
+    close. This is NOT equivalent to a confirmed pattern: the closing
+    auction and last minutes of trading can still move price enough to
+    invalidate it. Two conditions, both required:
+      1. Already bullish and already a "tall enough" body: the move so far
+         (today_current_price - today_open) is at least half of Day 1's
+         body, tracking toward a tall bullish candle rather than a weak one.
+      2. Already past the 50%-into-Day-1 threshold with a buffer: requires
+         price >= day1_midpoint + buffer_fraction * day1_body (default 10%
+         of Day 1's body past the minimum bar), so a small give-back into
+         the close doesn't flip the pattern invalid.
+    """
+    if today_current_price <= today_open:
+        return False
+    body_so_far = today_current_price - today_open
+    if body_so_far < 0.5 * day1_body:
+        return False
+    required = day1_midpoint + buffer_fraction * day1_body
+    return today_current_price >= required
+
+
 def _three_white_soldiers(c2, c1, c0, downtrend):
     candles = [c2, c1, c0]
     if not downtrend:
