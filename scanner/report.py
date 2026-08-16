@@ -11,7 +11,7 @@ ACTION_LABELS = {
 def render_scan_table(signals):
     lines = [
         "| Ticker | Pattern Detected | Entry Price | Signal Day High | "
-        "Signal Day Low (Stop Loss) | Shares ($500 Budget) | Target Price (+20%) |",
+        "Signal Day Low (Stop Loss) | Shares ($500 Budget) | Target Price (+10%) |",
         "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
     ]
     if not signals:
@@ -29,7 +29,7 @@ def render_scan_table(signals):
 def render_positions_table(rows):
     lines = [
         "| Ticker | Entry Date | Entry Price | Shares | Current Price | "
-        "Stop-Loss Level | Target (+20%) | Unrealized P&L (%) | "
+        "Stop-Loss Level | Target (+10%) | Unrealized P&L (%) | "
         "Action (Hold / Sell Stop / Sell Target) |",
         "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
     ]
@@ -66,7 +66,7 @@ def render_report(date, signals, position_rows, flagged_tickers=None):
 def render_morning_star_scan_table(signals):
     lines = [
         "| Ticker | Day 1 Close | Day 2 Low (Base Stop) | Day 3 Close (Entry) | "
-        "Shares ($500 Budget) | Stop Loss ($) | Target (+20%) ($) |",
+        "Shares ($500 Budget) | Stop Loss ($) | Target (+10%) ($) |",
         "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
     ]
     if not signals:
@@ -101,7 +101,7 @@ _PORTFOLIO_ACTION_LABELS = {
 def render_portfolio_table(rows):
     lines = [
         "| Ticker | Entry Date | Entry Price | Shares | Current Price | "
-        "Stop Loss Level | Target (+20%) | Unrealized P&L (%) | Action |",
+        "Stop Loss Level | Target (+10%) | Unrealized P&L (%) | Action |",
         "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
     ]
     if not rows:

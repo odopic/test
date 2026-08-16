@@ -3,7 +3,7 @@
 import math
 
 ALLOCATION_PER_POSITION = 500.0
-TAKE_PROFIT_MULTIPLIER = 1.20
+TAKE_PROFIT_MULTIPLIER = 1.10
 
 
 def build_signal(ticker, pattern, signal_candle, entry_price=None,
