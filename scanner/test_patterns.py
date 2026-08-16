@@ -1,6 +1,6 @@
 """Lightweight sanity checks for pattern detection (no pytest dependency)."""
 
-from scanner.patterns import detect
+from scanner.patterns import detect, detect_morning_star
 
 
 class Row(dict):
@@ -87,6 +87,37 @@ def test_three_white_soldiers():
     rows = prefix + soldiers
     result = detect(Frame(rows))
     assert result == "Three White Soldiers", result
+
+
+def test_detect_morning_star():
+    prefix, last_close = downtrend_prefix(100, 5)
+    day1 = Row(o=last_close, h=last_close + 0.1, l=last_close - 6.0, c=last_close - 5.8)  # tall bearish
+    day2 = Row(o=day1["close"] - 0.3, h=day1["close"] + 0.2, l=day1["close"] - 0.6,
+               c=day1["close"] - 0.2)  # small indecision body, gapped below day1 close
+    day1_mid = (day1["open"] + day1["close"]) / 2
+    day3 = Row(o=day2["close"] + 0.2, h=day1_mid + 3.0, l=day2["close"] - 0.1,
+               c=day1_mid + 2.5)  # tall bullish, closes well above day1 midpoint
+    rows = prefix + [day1, day2, day3]
+
+    result = detect_morning_star(Frame(rows))
+    assert result is not None, "expected a confirmed Morning Star"
+    assert result["pattern"] == "Morning Star"
+    expected_low = min(day1["low"], day2["low"], day3["low"])
+    assert result["pattern_low"] == expected_low, (result["pattern_low"], expected_low)
+
+    # detect() (the general multi-pattern scan) should agree it's a Morning Star
+    assert detect(Frame(rows)) == "Morning Star"
+
+
+def test_detect_morning_star_rejects_without_downtrend():
+    rows = []
+    price = 100
+    for _ in range(8):
+        o = price
+        c = price + 1.0
+        rows.append(Row(o, c + 0.1, o - 0.1, c))
+        price = c
+    assert detect_morning_star(Frame(rows)) is None
 
 
 if __name__ == "__main__":

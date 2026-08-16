@@ -91,6 +91,10 @@ def main():
     ap.add_argument("--allocation", type=float, default=strategy.ALLOCATION_PER_POSITION)
     ap.add_argument("--downtrend-lookback", type=int, default=5)
     ap.add_argument("--entry-mode", choices=["close", "next_open"], default="close")
+    ap.add_argument("--pattern", choices=["morning_star", "any"], default="morning_star",
+                     help="'morning_star' (default): strictly Morning Star only, stop-loss = "
+                          "3-day pattern low. 'any': the original 8-pattern scan with a "
+                          "single-day-low stop.")
     ap.add_argument("--report-date", default=None,
                      help="Label for the report; defaults to today's date")
     ap.add_argument("--reports-dir", default="reports")
@@ -120,15 +124,21 @@ def main():
             continue  # never trigger a new buy signal on an already-open position
 
         frame = _Frame(rows)
-        pattern_name = patterns.detect(frame, downtrend_lookback=args.downtrend_lookback)
-        if not pattern_name:
-            continue
+        if args.pattern == "morning_star":
+            ms = patterns.detect_morning_star(frame, downtrend_lookback=args.downtrend_lookback)
+            if not ms:
+                continue
+            signal = strategy.build_morning_star_signal(
+                ticker, ms["day1"], ms["day2"], ms["day3"], ms["pattern_low"],
+                entry_price=None, allocation=args.allocation)
+        else:
+            pattern_name = patterns.detect(frame, downtrend_lookback=args.downtrend_lookback)
+            if not pattern_name:
+                continue
+            signal_row = _Row(rows[-1])
+            signal = strategy.build_signal(ticker, pattern_name, signal_row,
+                                            entry_price=None, allocation=args.allocation)
 
-        signal_row = _Row(rows[-1])
-        entry_price = None  # defaults to close
-        signal = strategy.build_signal(ticker, pattern_name, signal_row,
-                                        entry_price=entry_price,
-                                        allocation=args.allocation)
         signals.append(signal)
         portfolio.open_position(state, signal, entry_date=rows[-1]["date"])
 
@@ -136,7 +146,11 @@ def main():
     portfolio.save(state, args.portfolio)
 
     report_date = args.report_date or date_cls.today().isoformat()
-    text = report.render_report(report_date, signals, position_rows, flagged_tickers=flagged)
+    if args.pattern == "morning_star":
+        text = report.render_morning_star_report(report_date, signals, position_rows,
+                                                   flagged_tickers=flagged)
+    else:
+        text = report.render_report(report_date, signals, position_rows, flagged_tickers=flagged)
 
     os.makedirs(args.reports_dir, exist_ok=True)
     out_path = os.path.join(args.reports_dir, f"{report_date}.md")

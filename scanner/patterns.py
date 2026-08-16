@@ -174,6 +174,38 @@ def _morning_star(c2, c1, c0, downtrend):
     )
 
 
+def detect_morning_star(df, downtrend_lookback=5):
+    """Strictly evaluates only the Morning Star pattern on the last 3
+    completed daily candles (Day 1 bearish, Day 2 indecision star, Day 3
+    bullish confirmation closing >=50% into Day 1's body), gated on a prior
+    downtrend. Returns {"pattern", "day1", "day2", "day3", "pattern_low"}
+    on a confirmed signal, else None. day1/day2/day3 are the raw row
+    objects (not Candle) so callers can read .close/.low/etc directly.
+    """
+    if len(df) < downtrend_lookback + 3:
+        return None
+
+    closes = list(df["close"])
+    trend_closes = closes[:-1]
+    downtrend = is_downtrend(trend_closes, downtrend_lookback)
+    if not downtrend:
+        return None
+
+    day1, day2, day3 = df.iloc[-3], df.iloc[-2], df.iloc[-1]
+    c1, c2, c3 = _candle(day1), _candle(day2), _candle(day3)
+    if not _morning_star(c1, c2, c3, downtrend):
+        return None
+
+    pattern_low = min(c1.low, c2.low, c3.low)
+    return {
+        "pattern": "Morning Star",
+        "day1": day1,
+        "day2": day2,
+        "day3": day3,
+        "pattern_low": pattern_low,
+    }
+
+
 def _three_white_soldiers(c2, c1, c0, downtrend):
     candles = [c2, c1, c0]
     if not downtrend:

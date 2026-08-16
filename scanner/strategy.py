@@ -32,6 +32,31 @@ def build_signal(ticker, pattern, signal_candle, entry_price=None,
     }
 
 
+def build_morning_star_signal(ticker, day1, day2, day3, pattern_low, entry_price=None,
+                               allocation=ALLOCATION_PER_POSITION, available_cash=None):
+    """day1/day2/day3 are the three pattern candles (.open/.high/.low/.close);
+    pattern_low is min(day1.low, day2.low, day3.low) — the Morning Star's
+    stop-loss reference, distinct from the generic single-day-low stop
+    used elsewhere. entry_price defaults to Day 3's close ("Close" entry
+    mode); pass Day 4's open for "Next Open" entry mode."""
+    entry = float(entry_price if entry_price is not None else day3.close)
+    effective_allocation = allocation if available_cash is None else min(allocation, available_cash)
+    shares = math.floor(effective_allocation / entry) if entry > 0 else 0
+    target = round(entry * TAKE_PROFIT_MULTIPLIER, 2)
+
+    return {
+        "ticker": ticker,
+        "pattern": "Morning Star",
+        "day1_close": round(float(day1.close), 2),
+        "day2_low": round(float(day2.low), 2),
+        "day3_close": round(entry, 2),
+        "entry_price": round(entry, 2),
+        "shares": shares,
+        "stop_loss": round(float(pattern_low), 2),
+        "target_price": target,
+    }
+
+
 def evaluate_exit(position, current_price):
     """Return one of 'SELL_STOP', 'SELL_TARGET', or 'HOLD'."""
     if current_price <= position["stop_loss"]:
