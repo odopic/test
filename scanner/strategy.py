@@ -7,14 +7,17 @@ TAKE_PROFIT_MULTIPLIER = 1.20
 
 
 def build_signal(ticker, pattern, signal_candle, entry_price=None,
-                  allocation=ALLOCATION_PER_POSITION):
+                  allocation=ALLOCATION_PER_POSITION, available_cash=None):
     """signal_candle is a row with .high/.low/.close (the confirmed daily candle).
     entry_price defaults to the signal candle's close ("Close" entry mode);
-    pass the next session's open for "Next Open" entry mode."""
+    pass the next session's open for "Next Open" entry mode.
+    available_cash, if given, caps allocation to whatever buying power is
+    actually left (a live account may have less than `allocation` free)."""
     entry = float(entry_price if entry_price is not None else signal_candle.close)
     day_high = float(signal_candle.high)
     day_low = float(signal_candle.low)
-    shares = math.floor(allocation / entry) if entry > 0 else 0
+    effective_allocation = allocation if available_cash is None else min(allocation, available_cash)
+    shares = math.floor(effective_allocation / entry) if entry > 0 else 0
     target = round(entry * TAKE_PROFIT_MULTIPLIER, 2)
 
     return {
