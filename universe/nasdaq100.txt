@@ -1,0 +1,107 @@
+# Nasdaq-100 constituents (approximate snapshot, not auto-updated).
+# The Nasdaq-100 is reconstituted periodically; verify against the official
+# Nasdaq index membership list before relying on this for live trading.
+# This is a practical proxy for "all NASDAQ stocks" scanning: the full
+# Nasdaq Composite / Capital Market listing runs into the thousands of
+# tickers and has no single machine-readable source wired into this tool.
+# To scan a different universe (Composite, a sector list, your own
+# watchlist), replace or point --universe at another file with one ticker
+# per line.
+#
+# Removed as of 2026-08-16 (confirmed no longer tradable / delisted):
+#   ANSS  - merged into Synopsys (SNPS)
+#   EA    - taken private
+#   WBA   - taken private (Walgreens Boots Alliance)
+AAPL
+MSFT
+NVDA
+AMZN
+GOOGL
+GOOG
+META
+AVGO
+TSLA
+COST
+NFLX
+ASML
+AMD
+PEP
+ADBE
+LIN
+CSCO
+TMUS
+AZN
+INTU
+QCOM
+TXN
+CMCSA
+AMGN
+AMAT
+ISRG
+HON
+BKNG
+VRTX
+PANW
+ADP
+SBUX
+GILD
+MU
+ADI
+LRCX
+MDLZ
+REGN
+PYPL
+KLAC
+SNPS
+CDNS
+MELI
+CRWD
+CTAS
+MAR
+PDD
+CSX
+ORLY
+ABNB
+WDAY
+ROP
+NXPI
+MRVL
+FTNT
+MNST
+DASH
+PCAR
+PAYX
+ROST
+AEP
+ODFL
+KDP
+EXC
+CPRT
+IDXX
+FAST
+VRSK
+BKR
+CTSH
+DDOG
+XEL
+GEHC
+KHC
+TTWO
+ON
+MCHP
+ZS
+TEAM
+DXCM
+CDW
+BIIB
+LULU
+GFS
+ILMN
+WBD
+CSGP
+MDB
+ARM
+DLTR
+TTD
+APP
+CCEP

@@ -1,0 +1,49 @@
+{
+  "open_positions": [
+    {
+      "ticker": "MAR",
+      "pattern": "Bullish Engulfing",
+      "entry_price": 356.72,
+      "signal_day_high": 358.1,
+      "signal_day_low": 349.74,
+      "shares": 1,
+      "target_price": 428.06,
+      "stop_loss": 349.74,
+      "entry_date": "2026-08-14"
+    },
+    {
+      "ticker": "PDD",
+      "pattern": "Bullish Harami",
+      "entry_price": 84.79,
+      "signal_day_high": 84.9,
+      "signal_day_low": 83.65,
+      "shares": 5,
+      "target_price": 101.75,
+      "stop_loss": 83.65,
+      "entry_date": "2026-08-14"
+    },
+    {
+      "ticker": "CSX",
+      "pattern": "Inverted Hammer",
+      "entry_price": 50.16,
+      "signal_day_high": 50.77,
+      "signal_day_low": 50.02,
+      "shares": 9,
+      "target_price": 60.19,
+      "stop_loss": 50.02,
+      "entry_date": "2026-08-14"
+    },
+    {
+      "ticker": "APP",
+      "pattern": "Inverted Hammer",
+      "entry_price": 315.44,
+      "signal_day_high": 324.37,
+      "signal_day_low": 313.0,
+      "shares": 1,
+      "target_price": 378.53,
+      "stop_loss": 313.0,
+      "entry_date": "2026-08-14"
+    }
+  ],
+  "closed_positions": []
+}

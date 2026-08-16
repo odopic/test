@@ -1,0 +1,63 @@
+"""Renders the two required markdown report tables."""
+
+ACTION_LABELS = {
+    "HOLD": "Hold",
+    "SELL_STOP": "Sell Stop",
+    "SELL_TARGET": "Sell Target",
+    "DATA_MISSING": "DATA DELAYED/INCOMPLETE",
+}
+
+
+def render_scan_table(signals):
+    lines = [
+        "| Ticker | Pattern Detected | Entry Price | Signal Day High | "
+        "Signal Day Low (Stop Loss) | Shares ($500 Budget) | Target Price (+20%) |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
+    ]
+    if not signals:
+        lines.append("| _None_ | No confirmed bullish setups today | | | | | |")
+        return "\n".join(lines)
+    for s in signals:
+        lines.append(
+            f"| {s['ticker']} | {s['pattern']} | ${s['entry_price']:.2f} | "
+            f"${s['signal_day_high']:.2f} | ${s['signal_day_low']:.2f} | "
+            f"{s['shares']} shares | ${s['target_price']:.2f} |"
+        )
+    return "\n".join(lines)
+
+
+def render_positions_table(rows):
+    lines = [
+        "| Ticker | Entry Date | Entry Price | Shares | Current Price | "
+        "Stop-Loss Level | Target (+20%) | Unrealized P&L (%) | "
+        "Action (Hold / Sell Stop / Sell Target) |",
+        "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
+    ]
+    if not rows:
+        lines.append("| _None_ | No open positions | | | | | | | |")
+        return "\n".join(lines)
+    for r in rows:
+        price = "DELAYED" if r["current_price"] is None else f"${r['current_price']:.2f}"
+        pnl = "N/A" if r["unrealized_pct"] is None else f"{r['unrealized_pct']:+.1f}%"
+        lines.append(
+            f"| {r['ticker']} | {r['entry_date']} | ${r['entry_price']:.2f} | "
+            f"{r['shares']} | {price} | ${r['stop_loss']:.2f} | "
+            f"${r['target_price']:.2f} | {pnl} | {ACTION_LABELS[r['action']]} |"
+        )
+    return "\n".join(lines)
+
+
+def render_report(date, signals, position_rows, flagged_tickers=None):
+    parts = [
+        f"# NASDAQ Bullish Scanner Report — {date}",
+        "",
+        "## 1. Daily Scan & New Buy Signals",
+        render_scan_table(signals),
+        "",
+        "## 2. Open Positions & Monitoring Status",
+        render_positions_table(position_rows),
+    ]
+    if flagged_tickers:
+        parts += ["", "## Data Quality Flags",
+                   "\n".join(f"- {t}: delayed or incomplete market data" for t in flagged_tickers)]
+    return "\n".join(parts)
