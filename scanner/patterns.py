@@ -259,6 +259,66 @@ def morning_star_day3_probable(day1_midpoint, day1_body, today_open, today_curre
     return today_current_price >= required
 
 
+def detect_three_red_then_green(df):
+    """Confirmed reversal: three consecutive bearish (red) daily candles in
+    a declining staircase (each day's close lower than the prior day's),
+    followed by a bullish (green) candle today. The three red days ARE the
+    required downtrend — no separate multi-day lookback is applied.
+    Returns {"pattern", "day1", "day2", "day3", "day4", "pattern_low"} on a
+    confirmed signal, else None. day1..day4 are the raw row objects.
+    """
+    if len(df) < 4:
+        return None
+
+    day1, day2, day3, day4 = df.iloc[-4], df.iloc[-3], df.iloc[-2], df.iloc[-1]
+    c1, c2, c3, c4 = _candle(day1), _candle(day2), _candle(day3), _candle(day4)
+
+    three_red_downtrend = (
+        c1.is_bearish and c2.is_bearish and c3.is_bearish
+        and c1.close > c2.close > c3.close
+    )
+    if not three_red_downtrend or not c4.is_bullish:
+        return None
+
+    pattern_low = min(c1.low, c2.low, c3.low, c4.low)
+    return {
+        "pattern": "Three Red Days Reversal",
+        "day1": day1,
+        "day2": day2,
+        "day3": day3,
+        "day4": day4,
+        "pattern_low": pattern_low,
+    }
+
+
+def detect_three_red_setup(df):
+    """Checks ONLY the three-red-day downtrend precondition (Day 1..Day 3),
+    using the three most recently COMPLETED daily bars — does not require
+    today's (Day 4) candle to exist yet. Use this the evening before a
+    session to build a watchlist. Returns {"day1", "day2", "day3"} or None.
+    """
+    if len(df) < 3:
+        return None
+    day1, day2, day3 = df.iloc[-3], df.iloc[-2], df.iloc[-1]
+    c1, c2, c3 = _candle(day1), _candle(day2), _candle(day3)
+    if c1.is_bearish and c2.is_bearish and c3.is_bearish and c1.close > c2.close > c3.close:
+        return {"day1": day1, "day2": day2, "day3": day3}
+    return None
+
+
+def three_red_reversal_day4_probable(today_open, today_current_price, buffer_fraction=0.001):
+    """HEURISTIC ONLY — for pre-close use, ~15 minutes before the official
+    close. Is today's still-forming candle already green with enough of a
+    buffer that a small give-back into the close won't flip it red?
+    Requires current price at least buffer_fraction above today's open
+    (default 0.1%). This is an estimate on an unconfirmed candle, not a
+    substitute for the settled close.
+    """
+    if today_open <= 0:
+        return False
+    return today_current_price >= today_open * (1 + buffer_fraction)
+
+
 def _three_white_soldiers(c2, c1, c0, downtrend):
     candles = [c2, c1, c0]
     if not downtrend:

@@ -1,6 +1,6 @@
 """Lightweight sanity checks for pattern detection (no pytest dependency)."""
 
-from scanner.patterns import detect, detect_morning_star
+from scanner.patterns import detect, detect_morning_star, detect_three_red_then_green, detect_three_red_setup
 
 
 class Row(dict):
@@ -118,6 +118,42 @@ def test_detect_morning_star_rejects_without_downtrend():
         rows.append(Row(o, c + 0.1, o - 0.1, c))
         price = c
     assert detect_morning_star(Frame(rows)) is None
+
+
+def test_three_red_then_green():
+    rows = [
+        Row(o=100, h=100.2, l=94, c=95),   # day1: red
+        Row(o=94.5, h=95, l=89, c=90),     # day2: red, lower close
+        Row(o=89.5, h=90, l=84, c=85),     # day3: red, lower close
+        Row(o=85.2, h=90, l=85.0, c=89),   # day4: green
+    ]
+    result = detect_three_red_then_green(Frame(rows))
+    assert result is not None
+    assert result["pattern"] == "Three Red Days Reversal"
+    assert result["pattern_low"] == 84, result["pattern_low"]
+
+    setup = detect_three_red_setup(Frame(rows[:3]))
+    assert setup is not None
+
+
+def test_three_red_then_green_rejects_non_declining_reds():
+    rows = [
+        Row(o=90, h=90.2, l=84, c=85),     # day1: red
+        Row(o=96, h=97, l=93, c=94.5),     # day2: red but close HIGHER than day1 (not declining)
+        Row(o=94, h=95, l=89, c=90),       # day3: red
+        Row(o=90.2, h=94, l=90.0, c=93),   # day4: green
+    ]
+    assert detect_three_red_then_green(Frame(rows)) is None
+
+
+def test_three_red_then_green_rejects_fourth_day_red():
+    rows = [
+        Row(o=100, h=100.2, l=94, c=95),
+        Row(o=94.5, h=95, l=89, c=90),
+        Row(o=89.5, h=90, l=84, c=85),
+        Row(o=85, h=86, l=82, c=83),       # day4: still red
+    ]
+    assert detect_three_red_then_green(Frame(rows)) is None
 
 
 if __name__ == "__main__":

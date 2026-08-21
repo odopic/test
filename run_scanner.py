@@ -91,10 +91,11 @@ def main():
     ap.add_argument("--allocation", type=float, default=strategy.ALLOCATION_PER_POSITION)
     ap.add_argument("--downtrend-lookback", type=int, default=5)
     ap.add_argument("--entry-mode", choices=["close", "next_open"], default="close")
-    ap.add_argument("--pattern", choices=["morning_star", "any"], default="morning_star",
-                     help="'morning_star' (default): strictly Morning Star only, stop-loss = "
-                          "3-day pattern low. 'any': the original 8-pattern scan with a "
-                          "single-day-low stop.")
+    ap.add_argument("--pattern", choices=["three_red", "morning_star", "any"], default="three_red",
+                     help="'three_red' (default): three consecutive red days in a declining "
+                          "staircase followed by a green day, stop-loss = 4-day pattern low. "
+                          "'morning_star': strictly Morning Star only, stop-loss = 3-day pattern "
+                          "low. 'any': the original 8-pattern scan with a single-day-low stop.")
     ap.add_argument("--report-date", default=None,
                      help="Label for the report; defaults to today's date")
     ap.add_argument("--reports-dir", default="reports")
@@ -124,7 +125,14 @@ def main():
             continue  # never trigger a new buy signal on an already-open position
 
         frame = _Frame(rows)
-        if args.pattern == "morning_star":
+        if args.pattern == "three_red":
+            tr = patterns.detect_three_red_then_green(frame)
+            if not tr:
+                continue
+            signal = strategy.build_three_red_reversal_signal(
+                ticker, tr["day1"], tr["day2"], tr["day3"], tr["day4"], tr["pattern_low"],
+                entry_price=None, allocation=args.allocation)
+        elif args.pattern == "morning_star":
             ms = patterns.detect_morning_star(frame, downtrend_lookback=args.downtrend_lookback)
             if not ms:
                 continue
@@ -146,7 +154,10 @@ def main():
     portfolio.save(state, args.portfolio)
 
     report_date = args.report_date or date_cls.today().isoformat()
-    if args.pattern == "morning_star":
+    if args.pattern == "three_red":
+        text = report.render_three_red_reversal_report(report_date, signals, position_rows,
+                                                         flagged_tickers=flagged)
+    elif args.pattern == "morning_star":
         text = report.render_morning_star_report(report_date, signals, position_rows,
                                                    flagged_tickers=flagged)
     else:

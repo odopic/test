@@ -64,6 +64,36 @@ def build_morning_star_signal(ticker, day1, day2, day3, pattern_low, entry_price
     }
 
 
+def build_three_red_reversal_signal(ticker, day1, day2, day3, day4, pattern_low, entry_price=None,
+                                     allocation=ALLOCATION_PER_POSITION, available_cash=None,
+                                     entry_mode="eod_confirmed"):
+    """day1/day2/day3 are the three red (bearish) days; day4 is today's
+    green (bullish) confirmation day. pattern_low is the lowest low across
+    all 4 days — the stop-loss reference. entry_price defaults to Day 4's
+    close ("Close" entry mode); pass Day 5's open for "Next Open" mode.
+    entry_mode: 'eod_confirmed' (Day 4 is a completed bar) or
+    'intraday_probable' (Day 4 is still forming — see
+    patterns.three_red_reversal_day4_probable)."""
+    entry = float(entry_price if entry_price is not None else day4.close)
+    effective_allocation = allocation if available_cash is None else min(allocation, available_cash)
+    shares = math.floor(effective_allocation / entry) if entry > 0 else 0
+    target = round(entry * TAKE_PROFIT_MULTIPLIER, 2)
+
+    return {
+        "ticker": ticker,
+        "pattern": "Three Red Days Reversal",
+        "entry_mode": entry_mode,
+        "day1_close": round(float(day1.close), 2),
+        "day2_close": round(float(day2.close), 2),
+        "day3_close": round(float(day3.close), 2),
+        "day4_close": round(entry, 2),
+        "entry_price": round(entry, 2),
+        "shares": shares,
+        "stop_loss": round(float(pattern_low), 2),
+        "target_price": target,
+    }
+
+
 def evaluate_exit(position, current_price):
     """Return one of 'SELL_STOP', 'SELL_TARGET', or 'HOLD'."""
     if current_price <= position["stop_loss"]:
