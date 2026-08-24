@@ -29,34 +29,6 @@
       "entry_date": "2026-08-20"
     },
     {
-      "ticker": "ARM",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "eod_confirmed",
-      "day1_close": 271.43,
-      "day2_close": 253.32,
-      "day3_close": 249.34,
-      "day4_close": 250.72,
-      "entry_price": 250.72,
-      "shares": 1,
-      "stop_loss": 241.5,
-      "target_price": 275.79,
-      "entry_date": "2026-08-20"
-    },
-    {
-      "ticker": "AMD",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "eod_confirmed",
-      "day1_close": 506.0,
-      "day2_close": 484.39,
-      "day3_close": 466.42,
-      "day4_close": 469.45,
-      "entry_price": 469.45,
-      "shares": 1,
-      "stop_loss": 460.27,
-      "target_price": 516.4,
-      "entry_date": "2026-08-20"
-    },
-    {
       "ticker": "SBUX",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -83,6 +55,34 @@
       "stop_loss": 109.23,
       "target_price": 122.54,
       "entry_date": "2026-08-21"
+    },
+    {
+      "ticker": "XEL",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 79.41,
+      "day2_close": 78.71,
+      "day3_close": 76.3,
+      "day4_close": 77.3687,
+      "entry_price": 77.3687,
+      "shares": 6,
+      "stop_loss": 76.12,
+      "target_price": 85.11,
+      "entry_date": "2026-08-24"
+    },
+    {
+      "ticker": "EXC",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 45.3,
+      "day2_close": 45.06,
+      "day3_close": 43.78,
+      "day4_close": 44.3599,
+      "entry_price": 44.3599,
+      "shares": 6,
+      "stop_loss": 43.75,
+      "target_price": 48.8,
+      "entry_date": "2026-08-24"
     }
   ],
   "closed_positions": [
@@ -97,6 +97,30 @@
       "exit_reason": "stop_loss",
       "realized_pnl": -11.86,
       "realized_pnl_pct": -3.12
+    },
+    {
+      "ticker": "ARM",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 250.72,
+      "exit_price": 239.2801,
+      "shares": 1,
+      "entry_date": "2026-08-20",
+      "exit_date": "2026-08-24",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -11.44,
+      "realized_pnl_pct": -4.56
+    },
+    {
+      "ticker": "AMD",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 469.45,
+      "exit_price": 456.0001,
+      "shares": 1,
+      "entry_date": "2026-08-20",
+      "exit_date": "2026-08-24",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -13.45,
+      "realized_pnl_pct": -2.86
     }
   ],
   "cancelled_unfilled": [
