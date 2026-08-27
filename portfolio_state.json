@@ -1,20 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "AMZN",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "eod_confirmed",
-      "day1_close": 262.65,
-      "day2_close": 261.31,
-      "day3_close": 259.45,
-      "day4_close": 265.84,
-      "entry_price": 265.84,
-      "shares": 1,
-      "stop_loss": 257.73,
-      "target_price": 292.42,
-      "entry_date": "2026-08-20"
-    },
-    {
       "ticker": "WDAY",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "eod_confirmed",
@@ -86,6 +72,18 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "AMZN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 265.84,
+      "exit_price": 256.93,
+      "shares": 1,
+      "entry_date": "2026-08-20",
+      "exit_date": "2026-08-27",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -8.91,
+      "realized_pnl_pct": -3.35
+    },
     {
       "ticker": "KLAC",
       "pattern": "Three Red Days Reversal",
