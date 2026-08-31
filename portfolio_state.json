@@ -1,6 +1,20 @@
 {
   "open_positions": [
     {
+      "ticker": "GEHC",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 73.31,
+      "day2_close": 72.48,
+      "day3_close": 71.725,
+      "day4_close": 71.3999,
+      "entry_price": 71.3999,
+      "shares": 7,
+      "stop_loss": 70.2901,
+      "target_price": 78.54,
+      "entry_date": "2026-08-31"
+    },
+    {
       "ticker": "AMZN",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -55,23 +69,21 @@
       "stop_loss": 109.23,
       "target_price": 122.54,
       "entry_date": "2026-08-21"
-    },
-    {
-      "ticker": "EXC",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 45.3,
-      "day2_close": 45.06,
-      "day3_close": 43.78,
-      "day4_close": 44.3599,
-      "entry_price": 44.3599,
-      "shares": 6,
-      "stop_loss": 43.75,
-      "target_price": 48.8,
-      "entry_date": "2026-08-24"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "EXC",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 44.3599,
+      "exit_price": 43.6901,
+      "shares": 6,
+      "entry_date": "2026-08-24",
+      "exit_date": "2026-08-31",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -4.02,
+      "realized_pnl_pct": -1.51
+    },
     {
       "ticker": "XEL",
       "pattern": "Three Red Days Reversal",
