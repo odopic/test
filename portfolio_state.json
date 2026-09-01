@@ -1,6 +1,34 @@
 {
   "open_positions": [
     {
+      "ticker": "MRVL",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 241.45,
+      "day2_close": 216.62,
+      "day3_close": 211.66,
+      "day4_close": 209.9389,
+      "entry_price": 209.9389,
+      "shares": 2,
+      "stop_loss": 200.62,
+      "target_price": 230.93,
+      "entry_date": "2026-09-01"
+    },
+    {
+      "ticker": "GFS",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 46.34,
+      "day2_close": 44.76,
+      "day3_close": 44.69,
+      "day4_close": 43.9599,
+      "entry_price": 43.9599,
+      "shares": 1,
+      "stop_loss": 43.258,
+      "target_price": 48.36,
+      "entry_date": "2026-09-01"
+    },
+    {
       "ticker": "GEHC",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -13,20 +41,6 @@
       "stop_loss": 70.2901,
       "target_price": 78.54,
       "entry_date": "2026-08-31"
-    },
-    {
-      "ticker": "AMZN",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 261.06,
-      "day2_close": 260.28,
-      "day3_close": 256.26,
-      "day4_close": 266.4499,
-      "entry_price": 266.4499,
-      "shares": 1,
-      "stop_loss": 255.02,
-      "target_price": 293.09,
-      "entry_date": "2026-08-28"
     },
     {
       "ticker": "WDAY",
@@ -72,6 +86,18 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "AMZN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 266.4499,
+      "exit_price": 254.2501,
+      "shares": 1,
+      "entry_date": "2026-08-28",
+      "exit_date": "2026-09-01",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -12.20,
+      "realized_pnl_pct": -4.58
+    },
     {
       "ticker": "EXC",
       "pattern": "Three Red Days Reversal",
