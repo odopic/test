@@ -55,37 +55,33 @@
       "stop_loss": 43.258,
       "target_price": 48.36,
       "entry_date": "2026-09-01"
-    },
+    }
+  ],
+  "closed_positions": [
     {
       "ticker": "WDAY",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "eod_confirmed",
-      "day1_close": 198.68,
-      "day2_close": 191.18,
-      "day3_close": 190.63,
-      "day4_close": 198.42,
       "entry_price": 198.42,
+      "exit_price": 186.4119,
       "shares": 2,
-      "stop_loss": 189.31,
-      "target_price": 218.26,
-      "entry_date": "2026-08-20"
+      "entry_date": "2026-08-20",
+      "exit_date": "2026-09-08",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -24.02,
+      "realized_pnl_pct": -6.05
     },
     {
       "ticker": "SBUX",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 106.01,
-      "day2_close": 104.98,
-      "day3_close": 103.99,
-      "day4_close": 106.9699,
       "entry_price": 106.9699,
+      "exit_price": 102.025,
       "shares": 4,
-      "stop_loss": 102.97,
-      "target_price": 117.67,
-      "entry_date": "2026-08-21"
-    }
-  ],
-  "closed_positions": [
+      "entry_date": "2026-08-21",
+      "exit_date": "2026-09-08",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -19.78,
+      "realized_pnl_pct": -4.62
+    },
     {
       "ticker": "GEHC",
       "pattern": "Three Red Days Reversal",
