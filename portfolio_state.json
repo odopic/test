@@ -1,6 +1,62 @@
 {
   "open_positions": [
     {
+      "ticker": "AZN",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 162.70,
+      "day2_close": 160.04,
+      "day3_close": 156.94,
+      "day4_close": 159.8199,
+      "entry_price": 159.8199,
+      "shares": 1,
+      "stop_loss": 156.74,
+      "target_price": 175.80,
+      "entry_date": "2026-09-10"
+    },
+    {
+      "ticker": "PYPL",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 54.96,
+      "day2_close": 53.18,
+      "day3_close": 52.17,
+      "day4_close": 53.1599,
+      "entry_price": 53.1599,
+      "shares": 1,
+      "stop_loss": 50.802,
+      "target_price": 58.48,
+      "entry_date": "2026-09-10"
+    },
+    {
+      "ticker": "WBD",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 28.25,
+      "day2_close": 28.12,
+      "day3_close": 27.91,
+      "day4_close": 28.1899,
+      "entry_price": 28.1899,
+      "shares": 1,
+      "stop_loss": 27.91,
+      "target_price": 31.01,
+      "entry_date": "2026-09-10"
+    },
+    {
+      "ticker": "TTD",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 14.43,
+      "day2_close": 14.02,
+      "day3_close": 13.88,
+      "day4_close": 13.8899,
+      "entry_price": 13.8899,
+      "shares": 1,
+      "stop_loss": 13.71,
+      "target_price": 15.28,
+      "entry_date": "2026-09-10"
+    },
+    {
       "ticker": "ISRG",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
