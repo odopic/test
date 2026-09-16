@@ -125,6 +125,20 @@
       "stop_loss": 77.245,
       "target_price": 87.31,
       "entry_date": "2026-09-14"
+    },
+    {
+      "ticker": "EXC",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 43.16,
+      "day2_close": 42.72,
+      "day3_close": 42.195,
+      "day4_close": 42.3299,
+      "entry_price": 42.3299,
+      "shares": 2,
+      "stop_loss": 42.135,
+      "target_price": 46.56,
+      "entry_date": "2026-09-16"
     }
   ],
   "closed_positions": [
