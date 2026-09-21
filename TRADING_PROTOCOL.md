@@ -18,6 +18,15 @@ that position's standing stop order via `cancel_advanced_order`/order-cancel,
 then market SELL). Missing a target for a few hours is a much smaller risk than
 missing a stop-loss, which is why only the stop got a standing order.
 
+## Take-profit target: +20% (changed 2026-09-21)
+
+`TAKE_PROFIT_MULTIPLIER` in `scanner/strategy.py` is now **1.20** (was 1.10).
+Rationale: now that the stop trails up daily, the position is protected against
+giving back gains, so the target can be set further out to let winners run
+further before taking profit. All 9 positions open at the time of the change
+had their `target_price` recomputed to entry_price × 1.20. Every new entry from
+here on uses the 1.20 multiplier automatically via `build_three_red_reversal_signal`.
+
 Robinhood rejects stop prices with more than 2 decimal places on symbols above
 $1 ("subpenny increments"). Round to the nearest cent when placing/replacing.
 
