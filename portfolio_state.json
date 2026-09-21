@@ -12,7 +12,8 @@
       "shares": 1,
       "stop_loss": 156.74,
       "target_price": 175.80,
-      "entry_date": "2026-09-10"
+      "entry_date": "2026-09-10",
+      "stop_order_id": "6ab192eb-55a7-4256-bf5b-ce4f69397547"
     },
     {
       "ticker": "PYPL",
@@ -24,9 +25,10 @@
       "day4_close": 53.1599,
       "entry_price": 53.1599,
       "shares": 1,
-      "stop_loss": 50.802,
+      "stop_loss": 50.80,
       "target_price": 58.48,
-      "entry_date": "2026-09-10"
+      "entry_date": "2026-09-10",
+      "stop_order_id": "6ab19316-6dfa-49b8-bc41-3420026d090d"
     },
     {
       "ticker": "TTD",
@@ -40,7 +42,8 @@
       "shares": 1,
       "stop_loss": 13.71,
       "target_price": 15.28,
-      "entry_date": "2026-09-10"
+      "entry_date": "2026-09-10",
+      "stop_order_id": "6ab192f0-daee-493b-96a9-44393d20822b"
     },
     {
       "ticker": "NVDA",
@@ -54,7 +57,8 @@
       "shares": 2,
       "stop_loss": 208.93,
       "target_price": 232.74,
-      "entry_date": "2026-09-14"
+      "entry_date": "2026-09-14",
+      "stop_order_id": "6ab192f2-7809-4934-aa92-5e4a6485c3ce"
     },
     {
       "ticker": "PDD",
@@ -66,9 +70,10 @@
       "day4_close": 79.3699,
       "entry_price": 79.3699,
       "shares": 1,
-      "stop_loss": 77.245,
+      "stop_loss": 77.25,
       "target_price": 87.31,
-      "entry_date": "2026-09-14"
+      "entry_date": "2026-09-14",
+      "stop_order_id": "6ab19318-a61a-4228-9d4d-21b66f10244a"
     },
     {
       "ticker": "NFLX",
@@ -82,7 +87,8 @@
       "shares": 6,
       "stop_loss": 70.11,
       "target_price": 79.20,
-      "entry_date": "2026-09-18"
+      "entry_date": "2026-09-18",
+      "stop_order_id": "6ab192f7-f87e-41d0-997f-206851e825a7"
     },
     {
       "ticker": "TMUS",
@@ -96,7 +102,8 @@
       "shares": 2,
       "stop_loss": 164.02,
       "target_price": 185.57,
-      "entry_date": "2026-09-18"
+      "entry_date": "2026-09-18",
+      "stop_order_id": "6ab192fa-fce0-497b-9ea6-b62ddda48f59"
     },
     {
       "ticker": "TXN",
@@ -108,9 +115,10 @@
       "day4_close": 264.7758,
       "entry_price": 264.7758,
       "shares": 1,
-      "stop_loss": 257.095,
+      "stop_loss": 257.10,
       "target_price": 291.25,
-      "entry_date": "2026-09-18"
+      "entry_date": "2026-09-18",
+      "stop_order_id": "6ab1931a-e577-442c-a739-6c3b943d1ea2"
     },
     {
       "ticker": "CMCSA",
@@ -124,7 +132,8 @@
       "shares": 2,
       "stop_loss": 22.36,
       "target_price": 25.13,
-      "entry_date": "2026-09-18"
+      "entry_date": "2026-09-18",
+      "stop_order_id": "6ab192ff-c8d3-47f4-b334-077507a294ab"
     }
   ],
   "closed_positions": [
