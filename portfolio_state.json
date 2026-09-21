@@ -71,20 +71,6 @@
       "entry_date": "2026-09-14"
     },
     {
-      "ticker": "EXC",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 43.16,
-      "day2_close": 42.72,
-      "day3_close": 42.195,
-      "day4_close": 42.3299,
-      "entry_price": 42.3299,
-      "shares": 2,
-      "stop_loss": 42.135,
-      "target_price": 46.56,
-      "entry_date": "2026-09-16"
-    },
-    {
       "ticker": "NFLX",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -142,6 +128,18 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "EXC",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 42.3299,
+      "exit_price": 41.9215,
+      "shares": 2,
+      "entry_date": "2026-09-16",
+      "exit_date": "2026-09-21",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -0.82,
+      "realized_pnl_pct": -0.96
+    },
     {
       "ticker": "ISRG",
       "pattern": "Three Red Days Reversal",
