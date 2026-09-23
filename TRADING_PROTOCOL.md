@@ -41,8 +41,19 @@ simulated once per daily cycle:
    stock made a new high), the new stop level = yesterday's **low**.
 3. Only ratchet **up** — never lower an existing stop.
 4. If the new level is higher than the current `stop_loss`: cancel the existing
-   standing stop order, place a new `stop_market`/`gtc` order at the new level,
-   update `stop_loss` and `stop_order_id` in `portfolio_state.json`.
+   standing stop order, then **before placing the new one, check the new level
+   against the current live price**:
+   - If current price is still above the new level: place the new
+     `stop_market`/`gtc` order normally, update `stop_loss` and
+     `stop_order_id` in `portfolio_state.json`.
+   - If current price has already fallen to/through the new level (discovered
+     2026-09-23, e.g. PDD/PEP): do NOT place a stop order — Robinhood rejects a
+     stop whose trigger is already breached, leaving the position with **no
+     protective order at all** until the rejection is noticed. Instead, treat
+     it as an immediate stop-loss: market SELL right away (this is also the
+     economically correct behavior — the position failed to hold above the
+     prior day's low), then record `exit_reason: "stop_loss"` and move it to
+     `closed_positions`.
 
 ## Daily cycle changes
 
