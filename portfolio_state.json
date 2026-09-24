@@ -13,22 +13,8 @@
       "stop_loss": 226.50,
       "target_price": 253.90,
       "entry_date": "2026-09-14",
-      "stop_order_id": "6ab42cd8-4e16-402a-b8a7-cf83e4cc9dd6"
-    },
-    {
-      "ticker": "TXN",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 263.43,
-      "day2_close": 260.67,
-      "day3_close": 258.14,
-      "day4_close": 264.7758,
-      "entry_price": 264.7758,
-      "shares": 1,
-      "stop_loss": 267.43,
-      "target_price": 317.73,
-      "entry_date": "2026-09-18",
-      "stop_order_id": "6ab42cdd-5532-471b-a148-c1b11d1817b8"
+      "stop_order_id": "6ab42cd8-4e16-402a-b8a7-cf83e4cc9dd6",
+      "stop_order_status": "REJECTED — NOT RESTING ON EXCHANGE as of 2026-09-24. This order was rejected immediately when placed on 2026-09-23 (already-breached-level edge case per TRADING_PROTOCOL.md), but the 2026-09-23 cycle incorrectly logged it as accepted. Position has been unprotected since 2026-09-23T19:47Z. Current price (2026-09-24 ~19:54 UTC) is 224.76, already below this stop_loss level, so this is economically an overdue stop-loss exit. A market SELL was attempted on 2026-09-24 but was BLOCKED by the auto-mode classifier (real-money transactions require explicit owner approval this cycle) — see owner message. Needs owner action: approve the sell or re-place the stop manually."
     },
     {
       "ticker": "MDLZ",
@@ -61,36 +47,6 @@
       "stop_order_id": "6ab42d77-3ceb-485a-a056-a84a1e1fd8a1"
     },
     {
-      "ticker": "VRSK",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 175.41,
-      "day2_close": 172.02,
-      "day3_close": 171.94,
-      "day4_close": 171.7499,
-      "entry_price": 171.7499,
-      "shares": 1,
-      "stop_loss": 169.84,
-      "target_price": 206.10,
-      "entry_date": "2026-09-23",
-      "stop_order_id": "6ab42d87-5bf0-4736-8aa2-dc897d84a68f"
-    },
-    {
-      "ticker": "CTSH",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 59.87,
-      "day2_close": 59.38,
-      "day3_close": 58.68,
-      "day4_close": 59.4599,
-      "entry_price": 59.4599,
-      "shares": 1,
-      "stop_loss": 58.35,
-      "target_price": 71.35,
-      "entry_date": "2026-09-23",
-      "stop_order_id": "6ab42d97-c9ca-43c2-bf1b-74d387fad7cc"
-    },
-    {
       "ticker": "ROP",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -107,6 +63,43 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "TXN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 264.7758,
+      "exit_price": 267.4084,
+      "shares": 1,
+      "entry_date": "2026-09-18",
+      "exit_date": "2026-09-24",
+      "exit_reason": "stop_loss",
+      "exit_note": "Trailing stop had ratcheted above entry, so this standing GTC stop filled for a small gain, not a loss.",
+      "realized_pnl": 2.63,
+      "realized_pnl_pct": 0.99
+    },
+    {
+      "ticker": "VRSK",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 171.7499,
+      "exit_price": 169.78,
+      "shares": 1,
+      "entry_date": "2026-09-23",
+      "exit_date": "2026-09-24",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -1.97,
+      "realized_pnl_pct": -1.15
+    },
+    {
+      "ticker": "CTSH",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 59.4599,
+      "exit_price": 58.35,
+      "shares": 1,
+      "entry_date": "2026-09-23",
+      "exit_date": "2026-09-24",
+      "exit_reason": "stop_loss",
+      "realized_pnl": -1.11,
+      "realized_pnl_pct": -1.87
+    },
     {
       "ticker": "PDD",
       "pattern": "Three Red Days Reversal",
