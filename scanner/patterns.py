@@ -306,13 +306,18 @@ def detect_three_red_setup(df):
     return None
 
 
-def three_red_reversal_day4_probable(today_open, today_current_price, buffer_fraction=0.001):
-    """HEURISTIC ONLY — for pre-close use, ~15 minutes before the official
+def three_red_reversal_day4_probable(today_open, today_current_price, buffer_fraction=0.01):
+    """HEURISTIC ONLY — for pre-close use, ~7 minutes before the official
     close. Is today's still-forming candle already green with enough of a
-    buffer that a small give-back into the close won't flip it red?
+    buffer that a normal give-back into the close won't flip it red?
     Requires current price at least buffer_fraction above today's open
-    (default 0.1%). This is an estimate on an unconfirmed candle, not a
-    substitute for the settled close.
+    (default 1%, raised 2026-09-24 from 0.1% — the old buffer was so thin
+    that ordinary intraday noise routinely reversed the "confirmation"
+    before the actual close, e.g. ROP on 2026-09-23 confirmed at only
+    +0.67% and gave most of it back by the settled close). This is still
+    an estimate on an unconfirmed candle, not a substitute for the settled
+    close — it just requires a much more convincing move before treating
+    the day as bullish.
     """
     if today_open <= 0:
         return False

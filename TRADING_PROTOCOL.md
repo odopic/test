@@ -55,6 +55,39 @@ simulated once per daily cycle:
      prior day's low), then record `exit_reason: "stop_loss"` and move it to
      `closed_positions`.
 
+## Entry timing and confirmation buffer (changed 2026-09-24)
+
+The owner flagged that entries were too often catching a marginal, barely-green
+intraday move that gave most of it back by the actual close (e.g. ROP on
+2026-09-23 confirmed at only +0.67% above today's open, then settled the day
+only +0.4% up — a weak, unconvincing move that shouldn't have cleared the bar).
+
+Two changes:
+
+1. **Trigger fires 7 minutes before close now, not 15.** Cron moved from
+   `45 19 * * 1-5` to `53 19 * * 1-5` (19:53 UTC = 3:53pm ET during EDT).
+   Rationale: the three-red-day pattern itself (days 1-3) is fixed, settled
+   data and can be scanned any time; only the day-4 confirmation check needs
+   to be close to the bell. Checking closer to the close shortens the window
+   in which the "confirmed" move can still reverse, without cutting it so
+   close (e.g. 20-30 seconds) that a slow API call risks missing the window
+   for a market order to complete within regular hours. Like the 19:45
+   original schedule, this assumes EDT — shift by an hour around the Nov/Mar
+   US DST transitions if not updated by then.
+2. **Confirmation buffer raised from 0.1% to 1%** (see
+   `three_red_reversal_day4_probable` in `scanner/patterns.py`). A signal now
+   needs current price ≥ today's open × 1.01, not × 1.001, before it counts
+   as a confirmed bullish day 4. This mechanically requires a much more
+   convincing intraday move and should exclude the kind of razor-thin,
+   easily-reversed confirmations (WDAY, VRSK, CTSH, ROP on 2026-09-23 were
+   all between +0.14% and +1.5% — most would now fail this bar) that were
+   producing entries which flipped red by the close.
+
+Net effect: fewer entries per day, but each one should represent real
+intraday conviction rather than noise. If this proves too strict (skips
+every candidate most days), it can be loosened — but the owner's complaint
+was specifically about entries being too easily won, so err strict for now.
+
 ## Daily cycle changes
 
 - Do NOT manually market-sell on a stop breach anymore — the standing order
