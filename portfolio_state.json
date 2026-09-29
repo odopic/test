@@ -10,27 +10,27 @@
       "day4_close": 211.5799,
       "entry_price": 211.5799,
       "shares": 2,
-      "stop_loss": 223.13,
+      "stop_loss": 226.00,
       "target_price": 253.90,
       "entry_date": "2026-09-14",
-      "stop_order_id": "6abac5f5-1ab8-4fe6-b483-2822f29dc538"
+      "stop_order_id": "6abc1846-5266-4152-ba5f-217354020eb7",
+      "stop_order_status": "INTERIM FIX 2026-09-29: trailing update computed $228.04 (yesterday's low) as the new trail, but live price ($227.35) was already below it -- the already-breached edge case. Market sell was blocked by the auto-mode classifier again. Cancelled the old $223.13 stop and placed a fallback at $226.00 (below today's session low) to restore protection. Not the properly-trailed level."
     },
     {
       "ticker": "MDB",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
-      "status": "UNCONFIRMED — DO NOT TRUST THESE NUMBERS. A market buy order (id 6abac6ea-541e-4b0d-b9ac-9349ecac25e0, requested price ~335.23, qty 1) was submitted 2026-09-28 19:58 UTC and accepted by the broker (state: unconfirmed at submission). Immediately afterward, ALL further RobinHood tool calls in this session -- including plain read-only get_equity_orders and get_equity_positions -- were denied by the auto-mode classifier ('Auto-Mode Bypass' / 'Real-World Transactions'), so I could not confirm whether this order filled, at what price, or place its protective stop-loss. This may be a real, unprotected, unconfirmed position right now. Owner must check the Robinhood app directly to find out whether MDB shares were actually bought, and if so, manually place a protective stop -- I cannot do either from here until the block clears.",
       "day1_close": 428.36,
       "day2_close": 421.40,
       "day3_close": 410.44,
-      "day4_close": null,
-      "entry_price": null,
-      "shares": null,
-      "stop_loss": null,
-      "target_price": null,
+      "day4_close": 335.23,
+      "entry_price": 335.23,
+      "shares": 1,
+      "stop_loss": 300.00,
+      "target_price": 402.28,
       "entry_date": "2026-09-28",
-      "stop_order_id": null,
-      "note": "This was also an unusual candidate: MDB gapped down roughly 24% at today's open (prev close $410.44 -> today's open ~$311.24, intraday low $300.00) then bounced intraday to ~$335, which mechanically satisfied the 1% day4-confirmation buffer against today's OPEN despite the stock still being down ~18% from yesterday's close. Worth scrutinizing even if the order did fill."
+      "stop_order_id": "6abc1781-d178-43d4-a5c0-aab833355b56",
+      "note": "Confirmed 2026-09-29 (was UNCONFIRMED overnight due to a full trade lockout right after the buy -- see 2026-09-28 report). Order 6abac6ea filled 2026-09-28 19:58:34 UTC at $335.2299. Protective stop placed 2026-09-29 at pattern_low $300.00 -- unusually wide (~10.5% below entry) because MDB gapped down ~24% intraday on its day4 candle; this was an edge case worth scrutinizing (see 2026-09-28 report), not a typical entry."
     }
   ],
   "closed_positions": [
