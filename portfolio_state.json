@@ -26,11 +26,26 @@
       "day4_close": 335.23,
       "entry_price": 335.23,
       "shares": 1,
-      "stop_loss": 300.00,
+      "stop_loss": 321.00,
       "target_price": 402.28,
       "entry_date": "2026-09-28",
-      "stop_order_id": "6abc1781-d178-43d4-a5c0-aab833355b56",
-      "note": "Confirmed 2026-09-29 (was UNCONFIRMED overnight due to a full trade lockout right after the buy -- see 2026-09-28 report). Order 6abac6ea filled 2026-09-28 19:58:34 UTC at $335.2299. Protective stop placed 2026-09-29 at pattern_low $300.00 -- unusually wide (~10.5% below entry) because MDB gapped down ~24% intraday on its day4 candle; this was an edge case worth scrutinizing (see 2026-09-28 report), not a typical entry."
+      "stop_order_id": "6abd68f2-b5e5-47b9-a807-80a56fca08f9",
+      "note": "Confirmed 2026-09-29 (was UNCONFIRMED overnight due to a full trade lockout right after the buy -- see 2026-09-28 report). Order 6abac6ea filled 2026-09-28 19:58:34 UTC at $335.2299. Edge-case entry worth scrutinizing: MDB gapped down ~24% intraday on its day4 candle (see 2026-09-28 report). Trailing stop ratcheted up 2026-09-30 from $300.00 to $321.00 (yesterday's low, since 9/29 made a new high vs 9/28) -- confirmed and resting normally, no breach issue this time."
+    },
+    {
+      "ticker": "TEAM",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 187.74,
+      "day2_close": 178.54,
+      "day3_close": 175.96,
+      "day4_close": 179.15,
+      "entry_price": 179.15,
+      "shares": 2,
+      "stop_loss": 168.05,
+      "target_price": 214.93,
+      "entry_date": "2026-09-30",
+      "stop_order_id": "6abd6964-7329-4a6e-89fc-6cf5670e4023"
     }
   ],
   "closed_positions": [
