@@ -10,11 +10,11 @@
       "day4_close": 211.5799,
       "entry_price": 211.5799,
       "shares": 2,
-      "stop_loss": 226.00,
+      "stop_loss": 228.17,
       "target_price": 253.90,
       "entry_date": "2026-09-14",
-      "stop_order_id": "6abc1846-5266-4152-ba5f-217354020eb7",
-      "stop_order_status": "INTERIM FIX 2026-09-29: trailing update computed $228.04 (yesterday's low) as the new trail, but live price ($227.35) was already below it -- the already-breached edge case. Market sell was blocked by the auto-mode classifier again. Cancelled the old $223.13 stop and placed a fallback at $226.00 (below today's session low) to restore protection. Not the properly-trailed level."
+      "stop_order_id": "6abeba84-d5bb-45cf-956a-d68665b958f7",
+      "note": "Back on normal trailing footing as of 2026-10-01: ratcheted from $226.00 to $228.17 (yesterday's low, new high by close) with no breach issue."
     },
     {
       "ticker": "MDB",
@@ -26,11 +26,11 @@
       "day4_close": 335.23,
       "entry_price": 335.23,
       "shares": 1,
-      "stop_loss": 321.00,
+      "stop_loss": 339.93,
       "target_price": 402.28,
       "entry_date": "2026-09-28",
-      "stop_order_id": "6abd68f2-b5e5-47b9-a807-80a56fca08f9",
-      "note": "Confirmed 2026-09-29 (was UNCONFIRMED overnight due to a full trade lockout right after the buy -- see 2026-09-28 report). Order 6abac6ea filled 2026-09-28 19:58:34 UTC at $335.2299. Edge-case entry worth scrutinizing: MDB gapped down ~24% intraday on its day4 candle (see 2026-09-28 report). Trailing stop ratcheted up 2026-09-30 from $300.00 to $321.00 (yesterday's low, since 9/29 made a new high vs 9/28) -- confirmed and resting normally, no breach issue this time."
+      "stop_order_id": "6abeba84-5be6-438d-b674-1d453ca786b6",
+      "note": "Confirmed 2026-09-29 (was UNCONFIRMED overnight due to a full trade lockout right after the buy -- see 2026-09-28 report). Order 6abac6ea filled 2026-09-28 19:58:34 UTC at $335.2299. Edge-case entry worth scrutinizing: MDB gapped down ~24% intraday on its day4 candle (see 2026-09-28 report). Trailing stop ratcheted again 2026-10-01 to $339.93 (yesterday's low, new high both by close and high) -- confirmed and resting normally."
     },
     {
       "ticker": "TEAM",
@@ -42,10 +42,25 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 168.05,
+      "stop_loss": 175.50,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6abd6964-7329-4a6e-89fc-6cf5670e4023"
+      "stop_order_id": "6abeba85-82d2-4f7a-b56c-9878270c0c1f"
+    },
+    {
+      "ticker": "BKR",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 57.12,
+      "day2_close": 55.92,
+      "day3_close": 54.90,
+      "day4_close": 55.70,
+      "entry_price": 55.70,
+      "shares": 8,
+      "stop_loss": 54.35,
+      "target_price": 66.84,
+      "entry_date": "2026-10-01",
+      "stop_order_id": "6abebaea-aab1-481b-a960-f5096f831c92"
     }
   ],
   "closed_positions": [
