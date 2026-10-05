@@ -10,11 +10,10 @@
       "day4_close": 211.5799,
       "entry_price": 211.5799,
       "shares": 2,
-      "stop_loss": 228.17,
+      "stop_loss": 233.60,
       "target_price": 253.90,
       "entry_date": "2026-09-14",
-      "stop_order_id": "6abeba84-d5bb-45cf-956a-d68665b958f7",
-      "note": "Back on normal trailing footing as of 2026-10-01: ratcheted from $226.00 to $228.17 (yesterday's low, new high by close) with no breach issue."
+      "stop_order_id": "6ac40090-bc2b-4c54-88ed-feceb2301c19"
     },
     {
       "ticker": "TEAM",
@@ -26,10 +25,10 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 182.57,
+      "stop_loss": 186.64,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6ac00c02-5542-4697-be53-d7ae3502d48b"
+      "stop_order_id": "6ac40091-7c03-44aa-837a-b4400f49724e"
     },
     {
       "ticker": "BKR",
@@ -41,10 +40,10 @@
       "day4_close": 55.70,
       "entry_price": 55.70,
       "shares": 8,
-      "stop_loss": 54.35,
+      "stop_loss": 55.30,
       "target_price": 66.84,
       "entry_date": "2026-10-01",
-      "stop_order_id": "6abebaea-aab1-481b-a960-f5096f831c92"
+      "stop_order_id": "6ac40093-cc68-4ddd-be29-0db7a431ac66"
     },
     {
       "ticker": "AVGO",
@@ -56,10 +55,25 @@
       "day4_close": 354.9499,
       "entry_price": 354.9499,
       "shares": 1,
-      "stop_loss": 343.29,
+      "stop_loss": 347.42,
       "target_price": 425.94,
       "entry_date": "2026-10-02",
-      "stop_order_id": "6ac00c68-e9ac-401c-ae9b-49f6ba956a01"
+      "stop_order_id": "6ac40094-e5a7-4260-80a2-0053a5a0ea8c"
+    },
+    {
+      "ticker": "BIIB",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 225.88,
+      "day2_close": 222.82,
+      "day3_close": 219.88,
+      "day4_close": 223.73,
+      "entry_price": 223.73,
+      "shares": 1,
+      "stop_loss": 218.22,
+      "target_price": 268.48,
+      "entry_date": "2026-10-05",
+      "stop_order_id": "6ac4011d-2960-4571-8be2-d8d298e14ee7"
     }
   ],
   "closed_positions": [
