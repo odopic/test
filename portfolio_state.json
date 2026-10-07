@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "NVDA",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 223.67,
-      "day2_close": 218.36,
-      "day3_close": 218.29,
-      "day4_close": 211.5799,
-      "entry_price": 211.5799,
-      "shares": 2,
-      "stop_loss": 235.15,
-      "target_price": 253.90,
-      "entry_date": "2026-09-14",
-      "stop_order_id": "6ac551fc-f2a4-492a-b118-294e77cce632"
-    },
-    {
       "ticker": "TEAM",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,25 +10,10 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 186.64,
+      "stop_loss": 190.96,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6ac40091-7c03-44aa-837a-b4400f49724e"
-    },
-    {
-      "ticker": "BKR",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 57.12,
-      "day2_close": 55.92,
-      "day3_close": 54.90,
-      "day4_close": 55.70,
-      "entry_price": 55.70,
-      "shares": 8,
-      "stop_loss": 55.73,
-      "target_price": 66.84,
-      "entry_date": "2026-10-01",
-      "stop_order_id": "6ac551fd-d94d-45b8-ac50-3dcfacc65d67"
+      "stop_order_id": "6ac6a47c-3657-4b3d-be91-87010e24ac3b"
     },
     {
       "ticker": "AVGO",
@@ -55,10 +25,10 @@
       "day4_close": 354.9499,
       "entry_price": 354.9499,
       "shares": 1,
-      "stop_loss": 356.14,
+      "stop_loss": 364.01,
       "target_price": 425.94,
       "entry_date": "2026-10-02",
-      "stop_order_id": "6ac551fe-7684-4187-8bf3-c073617b95e0"
+      "stop_order_id": "6ac6a47c-f860-4893-b05e-90fadfcf205b"
     },
     {
       "ticker": "ORLY",
@@ -70,13 +40,55 @@
       "day4_close": 85.1499,
       "entry_price": 85.1499,
       "shares": 3,
-      "stop_loss": 83.01,
+      "stop_loss": 83.38,
       "target_price": 102.18,
       "entry_date": "2026-10-06",
-      "stop_order_id": "6ac5529d-0e2f-4de9-8529-cb449ee59c02"
+      "stop_order_id": "6ac6a47d-9da5-4966-99ba-910c472089e7"
+    },
+    {
+      "ticker": "LRCX",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 347.49,
+      "day2_close": 345.80,
+      "day3_close": 333.89,
+      "day4_close": null,
+      "entry_price": null,
+      "shares": null,
+      "stop_loss": 321.15,
+      "target_price": null,
+      "entry_date": "2026-10-07",
+      "order_id": "6ac6a51a-2b77-425b-b8a0-43df0f2ab675",
+      "status": "UNCONFIRMED — buy order (1 share, market) submitted 2026-10-07T20:01:30Z, ~90 seconds AFTER the 20:00 UTC regular-close, and was still sitting in state=queued (quantity filled 0.000000, not in get_equity_positions) when this cycle's report was written. GFD market orders normally self-cancel if unfilled by end of day, but this one had not resolved either way as of report time. DO NOT trust shares/entry_price as real until verified. First action next cycle: check this order_id's final state — if filled, record the real fill and place its protective stop at 321.15 (today's pattern low, from day1 low 344.77 / day2 low 341.70 / day3 low 330.85 / today's intraday low-so-far 321.1525); if cancelled/expired, remove this entry entirely (no position was ever taken)."
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "NVDA",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 211.5799,
+      "exit_price": 237.432,
+      "shares": 2,
+      "entry_date": "2026-09-14",
+      "exit_date": "2026-10-07",
+      "exit_reason": "stop_loss",
+      "exit_note": "Daily trailing-stop ratchet computed a new level (238.93, from yesterday's low) that was already ABOVE the live price (237.83) by the time of placement — the already-breached-level edge case. Cancelled the old resting stop (235.15) and exited via immediate market sell instead of placing a stop that was already through the money.",
+      "realized_pnl": 51.7042,
+      "realized_pnl_pct": 12.22
+    },
+    {
+      "ticker": "BKR",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 55.70,
+      "exit_price": 55.71,
+      "shares": 8,
+      "entry_date": "2026-10-01",
+      "exit_date": "2026-10-07",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (55.73) filled overnight/this morning at 14:06:32 UTC, essentially at breakeven.",
+      "realized_pnl": 0.08,
+      "realized_pnl_pct": 0.14
+    },
     {
       "ticker": "BIIB",
       "pattern": "Three Red Days Reversal",
