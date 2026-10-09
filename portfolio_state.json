@@ -10,10 +10,10 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 193.49,
+      "stop_loss": 196.10,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6ac7f54b-f46b-495d-934b-e3e28c7bae1c"
+      "stop_order_id": "6ac94688-65fb-46ff-a16e-c633b3ab69df"
     },
     {
       "ticker": "ORLY",
@@ -25,10 +25,10 @@
       "day4_close": 85.1499,
       "entry_price": 85.1499,
       "shares": 3,
-      "stop_loss": 84.47,
+      "stop_loss": 84.59,
       "target_price": 102.18,
       "entry_date": "2026-10-06",
-      "stop_order_id": "6ac7f54b-d30e-4d9d-816b-34c3261f3088"
+      "stop_order_id": "6ac94688-1509-4706-9820-77ba845fa6f2"
     },
     {
       "ticker": "CTSH",
@@ -55,10 +55,25 @@
       "day4_close": 159.9199,
       "entry_price": 159.9199,
       "shares": 3,
-      "stop_loss": 154.06,
+      "stop_loss": 154.26,
       "target_price": 191.90,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ac7f5b9-b560-4dfa-8c1d-4bdd1a05a61a"
+      "stop_order_id": "6ac94689-de7f-4bab-b297-ab2b7bfdc36d"
+    },
+    {
+      "ticker": "GEHC",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 64.77,
+      "day2_close": 64.67,
+      "day3_close": 64.22,
+      "day4_close": 65.6999,
+      "entry_price": 65.6999,
+      "shares": 2,
+      "stop_loss": 63.32,
+      "target_price": 78.84,
+      "entry_date": "2026-10-09",
+      "stop_order_id": "6ac946ef-8c25-4ae0-998d-f6eee707c9fd"
     },
     {
       "ticker": "ODFL",
@@ -70,10 +85,10 @@
       "day4_close": 181.76,
       "entry_price": 181.76,
       "shares": 1,
-      "stop_loss": 175.42,
+      "stop_loss": 175.79,
       "target_price": 218.11,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ac7f5c5-16c4-4f83-b9ca-1531f214705e"
+      "stop_order_id": "6ac9468a-8f58-4ff4-a2e6-0f03f6872c3d"
     }
   ],
   "closed_positions": [
