@@ -10,10 +10,10 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 196.10,
+      "stop_loss": 202.01,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6ac94688-65fb-46ff-a16e-c633b3ab69df"
+      "stop_order_id": "6acd3b27-ab0f-40d9-a889-f454a8f36d34"
     },
     {
       "ticker": "ORLY",
@@ -25,10 +25,10 @@
       "day4_close": 85.1499,
       "entry_price": 85.1499,
       "shares": 3,
-      "stop_loss": 84.59,
+      "stop_loss": 85.58,
       "target_price": 102.18,
       "entry_date": "2026-10-06",
-      "stop_order_id": "6ac94688-1509-4706-9820-77ba845fa6f2"
+      "stop_order_id": "6acd3b28-c3ae-4875-9968-e87da8e9000a"
     },
     {
       "ticker": "CTSH",
@@ -46,21 +46,6 @@
       "stop_order_id": "6ac7f5aa-68cd-4b91-8a37-38f4c7cf7454"
     },
     {
-      "ticker": "BKNG",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 158.33,
-      "day2_close": 157.63,
-      "day3_close": 155.87,
-      "day4_close": 159.9199,
-      "entry_price": 159.9199,
-      "shares": 3,
-      "stop_loss": 154.26,
-      "target_price": 191.90,
-      "entry_date": "2026-10-08",
-      "stop_order_id": "6ac94689-de7f-4bab-b297-ab2b7bfdc36d"
-    },
-    {
       "ticker": "GEHC",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -70,10 +55,10 @@
       "day4_close": 65.6999,
       "entry_price": 65.6999,
       "shares": 2,
-      "stop_loss": 63.32,
+      "stop_loss": 64.29,
       "target_price": 78.84,
       "entry_date": "2026-10-09",
-      "stop_order_id": "6ac946ef-8c25-4ae0-998d-f6eee707c9fd"
+      "stop_order_id": "6acd3b2a-3c66-435c-903e-b08658c9c626"
     },
     {
       "ticker": "ODFL",
@@ -85,13 +70,41 @@
       "day4_close": 181.76,
       "entry_price": 181.76,
       "shares": 1,
-      "stop_loss": 175.79,
+      "stop_loss": 179.56,
       "target_price": 218.11,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ac9468a-8f58-4ff4-a2e6-0f03f6872c3d"
+      "stop_order_id": "6acd3b29-d536-47fe-8488-3e44ee226c71"
+    },
+    {
+      "ticker": "SBUX",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 93.58,
+      "day2_close": 93.21,
+      "day3_close": 90.75,
+      "day4_close": 92.1999,
+      "entry_price": 92.1999,
+      "shares": 5,
+      "stop_loss": 87.35,
+      "target_price": 110.64,
+      "entry_date": "2026-10-12",
+      "stop_order_id": "6acd3b90-279a-42e4-b50d-160230bd3825"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "BKNG",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 159.9199,
+      "exit_price": 158.2701,
+      "shares": 3,
+      "entry_date": "2026-10-08",
+      "exit_date": "2026-10-12",
+      "exit_reason": "stop_loss",
+      "exit_note": "Daily trailing-stop ratchet computed a new level (158.88, from Friday's low) that was marginally ABOVE the live price (158.85) by the time of placement -- the already-breached-level edge case, this time by just 3 cents. Cancelled the old resting stop (154.26) and exited via immediate market sell instead of placing a stop already through the money.",
+      "realized_pnl": -4.9494,
+      "realized_pnl_pct": -1.03
+    },
     {
       "ticker": "AVGO",
       "pattern": "Three Red Days Reversal",
