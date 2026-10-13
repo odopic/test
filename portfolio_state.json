@@ -10,10 +10,10 @@
       "day4_close": 179.15,
       "entry_price": 179.15,
       "shares": 2,
-      "stop_loss": 202.01,
+      "stop_loss": 205.43,
       "target_price": 214.93,
       "entry_date": "2026-09-30",
-      "stop_order_id": "6acd3b27-ab0f-40d9-a889-f454a8f36d34"
+      "stop_order_id": "6ace8c9d-b924-448e-bc78-1426320eb134"
     },
     {
       "ticker": "ORLY",
@@ -40,10 +40,10 @@
       "day4_close": 60.1299,
       "entry_price": 60.1299,
       "shares": 8,
-      "stop_loss": 54.70,
+      "stop_loss": 59.40,
       "target_price": 72.16,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ac7f5aa-68cd-4b91-8a37-38f4c7cf7454"
+      "stop_order_id": "6ace8c9e-8e15-48bd-aa4e-0d9d85d0ac7e"
     },
     {
       "ticker": "GEHC",
@@ -55,10 +55,10 @@
       "day4_close": 65.6999,
       "entry_price": 65.6999,
       "shares": 2,
-      "stop_loss": 64.29,
+      "stop_loss": 65.74,
       "target_price": 78.84,
       "entry_date": "2026-10-09",
-      "stop_order_id": "6acd3b2a-3c66-435c-903e-b08658c9c626"
+      "stop_order_id": "6ace8c9f-affe-4430-afeb-b56ec1b6df9c"
     },
     {
       "ticker": "ODFL",
@@ -85,10 +85,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 87.35,
+      "stop_loss": 90.71,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6acd3b90-279a-42e4-b50d-160230bd3825"
+      "stop_order_id": "6ace8ca0-8d88-4e8e-85da-4a7b5cca9fe5"
     }
   ],
   "closed_positions": [
