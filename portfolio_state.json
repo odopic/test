@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "TEAM",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 187.74,
-      "day2_close": 178.54,
-      "day3_close": 175.96,
-      "day4_close": 179.15,
-      "entry_price": 179.15,
-      "shares": 2,
-      "stop_loss": 205.43,
-      "target_price": 214.93,
-      "entry_date": "2026-09-30",
-      "stop_order_id": "6ace8c9d-b924-448e-bc78-1426320eb134"
-    },
-    {
       "ticker": "ORLY",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,10 +10,10 @@
       "day4_close": 85.1499,
       "entry_price": 85.1499,
       "shares": 3,
-      "stop_loss": 85.58,
+      "stop_loss": 85.94,
       "target_price": 102.18,
       "entry_date": "2026-10-06",
-      "stop_order_id": "6acd3b28-c3ae-4875-9968-e87da8e9000a"
+      "stop_order_id": "6acfde0b-00ed-4dec-b9d2-07b9a9759d30"
     },
     {
       "ticker": "CTSH",
@@ -40,10 +25,10 @@
       "day4_close": 60.1299,
       "entry_price": 60.1299,
       "shares": 8,
-      "stop_loss": 59.40,
+      "stop_loss": 59.75,
       "target_price": 72.16,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ace8c9e-8e15-48bd-aa4e-0d9d85d0ac7e"
+      "stop_order_id": "6acfde0c-b082-4017-baa0-49eec203c5bc"
     },
     {
       "ticker": "GEHC",
@@ -55,10 +40,10 @@
       "day4_close": 65.6999,
       "entry_price": 65.6999,
       "shares": 2,
-      "stop_loss": 65.74,
+      "stop_loss": 67.36,
       "target_price": 78.84,
       "entry_date": "2026-10-09",
-      "stop_order_id": "6ace8c9f-affe-4430-afeb-b56ec1b6df9c"
+      "stop_order_id": "6acfde0d-17e6-4479-9cab-0429efa79b97"
     },
     {
       "ticker": "ODFL",
@@ -70,10 +55,25 @@
       "day4_close": 181.76,
       "entry_price": 181.76,
       "shares": 1,
-      "stop_loss": 179.56,
+      "stop_loss": 179.65,
       "target_price": 218.11,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6acd3b29-d536-47fe-8488-3e44ee226c71"
+      "stop_order_id": "6acfde0e-6544-48d7-832d-1d6441d57b1f"
+    },
+    {
+      "ticker": "DLTR",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 118.64,
+      "day2_close": 117.61,
+      "day3_close": 116.28,
+      "day4_close": 122.0165,
+      "entry_price": 122.0165,
+      "shares": 3,
+      "stop_loss": 116.02,
+      "target_price": 146.42,
+      "entry_date": "2026-10-14",
+      "stop_order_id": "6acfde6e-b687-44e7-acb8-de642e732fe0"
     },
     {
       "ticker": "SBUX",
@@ -92,6 +92,19 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "TEAM",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 179.15,
+      "exit_price": 205.49,
+      "shares": 2,
+      "entry_date": "2026-09-30",
+      "exit_date": "2026-10-14",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (205.43) filled at 15:44:09 UTC after the trailing stop had ratcheted up through several cycles. A strong winner -- the stop did its job, locking in most of the run from 179.15 to over 212.",
+      "realized_pnl": 52.68,
+      "realized_pnl_pct": 14.70
+    },
     {
       "ticker": "BKNG",
       "pattern": "Three Red Days Reversal",
