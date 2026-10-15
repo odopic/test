@@ -25,10 +25,10 @@
       "day4_close": 60.1299,
       "entry_price": 60.1299,
       "shares": 8,
-      "stop_loss": 59.75,
+      "stop_loss": 61.55,
       "target_price": 72.16,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6acfde0c-b082-4017-baa0-49eec203c5bc"
+      "stop_order_id": "6ad12f8e-f657-4c1a-9a6c-f57ad11cbf60"
     },
     {
       "ticker": "GEHC",
@@ -40,10 +40,10 @@
       "day4_close": 65.6999,
       "entry_price": 65.6999,
       "shares": 2,
-      "stop_loss": 67.36,
+      "stop_loss": 67.66,
       "target_price": 78.84,
       "entry_date": "2026-10-09",
-      "stop_order_id": "6acfde0d-17e6-4479-9cab-0429efa79b97"
+      "stop_order_id": "6ad12f9b-dbb4-4c34-b174-061507e1f8fe"
     },
     {
       "ticker": "ODFL",
@@ -55,10 +55,10 @@
       "day4_close": 181.76,
       "entry_price": 181.76,
       "shares": 1,
-      "stop_loss": 179.65,
+      "stop_loss": 180.02,
       "target_price": 218.11,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6acfde0e-6544-48d7-832d-1d6441d57b1f"
+      "stop_order_id": "6ad12f9c-bd9d-4634-bde9-fad294ee8f09"
     },
     {
       "ticker": "DLTR",
@@ -85,10 +85,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 90.71,
+      "stop_loss": 91.31,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6ace8ca0-8d88-4e8e-85da-4a7b5cca9fe5"
+      "stop_order_id": "6ad12f9d-8da1-4061-8896-71fa378a90b4"
     }
   ],
   "closed_positions": [
