@@ -10,10 +10,10 @@
       "day4_close": 85.1499,
       "entry_price": 85.1499,
       "shares": 3,
-      "stop_loss": 88.23,
+      "stop_loss": 88.77,
       "target_price": 102.18,
       "entry_date": "2026-10-06",
-      "stop_order_id": "6ad2811c-ac88-48dd-9c47-49b4a85cd445"
+      "stop_order_id": "6ad675b2-3928-4dc5-8332-7d058c4d6992"
     },
     {
       "ticker": "CTSH",
@@ -25,10 +25,10 @@
       "day4_close": 60.1299,
       "entry_price": 60.1299,
       "shares": 8,
-      "stop_loss": 63.23,
+      "stop_loss": 64.66,
       "target_price": 72.16,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ad2811d-8f09-463a-a33a-cec7bace588d"
+      "stop_order_id": "6ad675b3-1049-4eb4-b07b-f131ac3a843d"
     },
     {
       "ticker": "ODFL",
@@ -40,25 +40,10 @@
       "day4_close": 181.76,
       "entry_price": 181.76,
       "shares": 1,
-      "stop_loss": 184.97,
+      "stop_loss": 185.25,
       "target_price": 218.11,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ad2811f-d8fa-407e-ba2a-d9ddbe3781cb"
-    },
-    {
-      "ticker": "DLTR",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 118.64,
-      "day2_close": 117.61,
-      "day3_close": 116.28,
-      "day4_close": 122.0165,
-      "entry_price": 122.0165,
-      "shares": 3,
-      "stop_loss": 122.74,
-      "target_price": 146.42,
-      "entry_date": "2026-10-14",
-      "stop_order_id": "6ad28120-0ca1-4cfd-8678-ed10b308f77f"
+      "stop_order_id": "6ad675b4-fd49-44bb-a216-ec70bc553a2f"
     },
     {
       "ticker": "SBUX",
@@ -70,13 +55,26 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 94.81,
+      "stop_loss": 96.48,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6ad28121-d7d3-44df-a63d-09df077e3a50"
+      "stop_order_id": "6ad675b5-472a-4cc3-bf66-5dfadfed241b"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "DLTR",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 122.0165,
+      "exit_price": 122.61,
+      "shares": 3,
+      "entry_date": "2026-10-14",
+      "exit_date": "2026-10-19",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (122.74, ratcheted up on Friday 10/16's cycle) filled intraday today at 17:03:52 UTC over the weekend-adjacent session, essentially a small gain rather than a loss.",
+      "realized_pnl": 1.7805,
+      "realized_pnl_pct": 0.49
+    },
     {
       "ticker": "GEHC",
       "pattern": "Three Red Days Reversal",
