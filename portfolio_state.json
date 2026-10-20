@@ -25,10 +25,10 @@
       "day4_close": 60.1299,
       "entry_price": 60.1299,
       "shares": 8,
-      "stop_loss": 64.66,
+      "stop_loss": 65.15,
       "target_price": 72.16,
       "entry_date": "2026-10-08",
-      "stop_order_id": "6ad675b3-1049-4eb4-b07b-f131ac3a843d"
+      "stop_order_id": "6ad7c705-83b4-45e3-b975-23727ea85b31"
     },
     {
       "ticker": "ODFL",
@@ -55,10 +55,25 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 96.48,
+      "stop_loss": 96.66,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6ad675b5-472a-4cc3-bf66-5dfadfed241b"
+      "stop_order_id": "6ad7c706-4347-456b-923b-ccf3621c7d37"
+    },
+    {
+      "ticker": "AMGN",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 434.03,
+      "day2_close": 432.49,
+      "day3_close": 424.94,
+      "day4_close": 437.8679,
+      "entry_price": 437.8679,
+      "shares": 1,
+      "stop_loss": 424.74,
+      "target_price": 525.44,
+      "entry_date": "2026-10-20",
+      "stop_order_id": "6ad7c76f-6b2c-4fc8-b66d-c1640bb410dd"
     }
   ],
   "closed_positions": [
