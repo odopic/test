@@ -10,10 +10,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 98.63,
+      "stop_loss": 100.43,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6adbbb7b-1d64-45fc-8dbb-64bc28988e69"
+      "stop_order_id": "6adfb03e-c493-462b-a713-8234f9c2ce8e"
     },
     {
       "ticker": "AMGN",
@@ -44,6 +44,21 @@
       "target_price": 275.14,
       "entry_date": "2026-10-23",
       "stop_order_id": "6adbbbd3-cb7c-4357-9370-58cf34beac43"
+    },
+    {
+      "ticker": "DXCM",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 80.26,
+      "day2_close": 78.32,
+      "day3_close": 77.94,
+      "day4_close": 78.5199,
+      "entry_price": 78.5199,
+      "shares": 6,
+      "stop_loss": 76.52,
+      "target_price": 94.22,
+      "entry_date": "2026-10-26",
+      "stop_order_id": "6adfb0a1-763f-4ec1-bfe8-f4a214bcdc76"
     }
   ],
   "closed_positions": [
