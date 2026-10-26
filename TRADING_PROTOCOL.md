@@ -88,6 +88,36 @@ intraday conviction rather than noise. If this proves too strict (skips
 every candidate most days), it can be loosened — but the owner's complaint
 was specifically about entries being too easily won, so err strict for now.
 
+## Allocation per position: $1,000 (changed 2026-10-26)
+
+`ALLOCATION_PER_POSITION` in `scanner/strategy.py` is now **1000.0** (was
+500.0). The owner added $3,000 in fresh capital to the account on this date.
+Every new entry from here on sizes against the $1,000 cap via
+`build_three_red_reversal_signal`; existing open positions are not
+retroactively resized.
+
+## Fully deploying small leftover cash (changed 2026-10-26)
+
+Whole-share sizing (`floor(allocation / entry_price)`) always leaves a few
+dollars of unspent cash behind, since share prices rarely divide evenly into
+the allocation. Over time this leftover accumulates into a "stuck" cash
+balance too small to comfortably size a normal position, especially now
+that $1,000 is the per-position cap.
+
+Rule: when the account's buying power (via `get_portfolio`) is **under
+$300** at the moment of sizing a confirmed signal, do not floor-divide into
+whole shares. Instead place the buy as a `market` order with `dollar_amount`
+set to the full available buying power (Robinhood computes fractional
+shares automatically) — regular trading hours only, per
+`place_equity_order`'s fractional-share rules. This spends the cash down to
+$0 rather than leaving a remainder on the sidelines. Record the resulting
+`entry_price` as the fill's `average_price` and size `shares` from the
+fill's `cumulative_quantity` (which may be fractional) when updating
+`portfolio_state.json`.
+
+Above the $300 threshold, continue sizing whole shares against the $1,000
+allocation cap as before.
+
 ## Daily cycle changes
 
 - Do NOT manually market-sell on a stop breach anymore — the standing order
