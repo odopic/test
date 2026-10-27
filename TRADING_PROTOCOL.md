@@ -118,6 +118,32 @@ fill's `cumulative_quantity` (which may be fractional) when updating
 Above the $300 threshold, continue sizing whole shares against the $1,000
 allocation cap as before.
 
+## Entry scan running past the close (discovered 2026-10-27)
+
+On 2026-10-27 the universe entry scan (quotes + historicals across ~89
+tickers, batched at 10 symbols/call) took long enough in wall-clock time
+that by the time a candidate's day-4 confirmation was checked, regular
+trading hours had already ended (`get_equity_quotes` showed
+`last_non_reg_trade_price` with a timestamp after `last_trade_price`,
+i.e. after-hours trading had already started). GOOGL cleared the 1%
+confirmation buffer (+1.12% above today's open) but the signal was
+discovered too late to act on with a same-day market order — a market
+order placed after the close queues for the next regular open instead of
+filling near the confirmed level, which reintroduces the overnight-gap
+risk this strategy's near-close timing was specifically designed to
+avoid (see "Entry timing and confirmation buffer" above).
+
+Rule: before placing an entry order, check whether regular hours are
+still open (a quote with a `last_non_reg_trade_price` timestamp newer
+than `last_trade_price` means they are not). If hours have already
+closed, do NOT place the market buy — record the ticker as "confirmed
+but not executed (scan completed after close)" in the report and let it
+re-qualify from a fresh day-4 check next session. Do not chase it with an
+extended-hours limit order; that changes the execution characteristics
+(wider spreads, thinner liquidity) the strategy wasn't designed around.
+If this keeps happening, the fix is to shrink/parallelize the scan or
+move the trigger earlier, not to improvise an after-hours order.
+
 ## Daily cycle changes
 
 - Do NOT manually market-sell on a stop breach anymore — the standing order

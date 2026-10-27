@@ -10,10 +10,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 100.43,
+      "stop_loss": 101.04,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6adfb03e-c493-462b-a713-8234f9c2ce8e"
+      "stop_order_id": "6ae101d6-6ffd-4b2b-8936-353eb65b0680"
     },
     {
       "ticker": "AMGN",
@@ -25,10 +25,10 @@
       "day4_close": 437.8679,
       "entry_price": 437.8679,
       "shares": 1,
-      "stop_loss": 437.19,
+      "stop_loss": 439.50,
       "target_price": 525.44,
       "entry_date": "2026-10-20",
-      "stop_order_id": "6adbbb7c-1e37-4ff8-a009-679a5cba3ee7"
+      "stop_order_id": "6ae101d7-e2ac-47c8-ae8e-ba340dde0492"
     },
     {
       "ticker": "LRCX",
@@ -40,10 +40,10 @@
       "day4_close": 229.2838,
       "entry_price": 229.2838,
       "shares": 2,
-      "stop_loss": 225.14,
+      "stop_loss": 230.51,
       "target_price": 275.14,
       "entry_date": "2026-10-23",
-      "stop_order_id": "6adbbbd3-cb7c-4357-9370-58cf34beac43"
+      "stop_order_id": "6ae101d8-6f72-4044-9232-7e7492dc2cd7"
     },
     {
       "ticker": "DXCM",
