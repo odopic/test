@@ -118,31 +118,67 @@ fill's `cumulative_quantity` (which may be fractional) when updating
 Above the $300 threshold, continue sizing whole shares against the $1,000
 allocation cap as before.
 
-## Entry scan running past the close (discovered 2026-10-27)
+## Entry scan split into Post-Close Scan + Pre-Close confirmation (changed 2026-10-27)
 
-On 2026-10-27 the universe entry scan (quotes + historicals across ~89
-tickers, batched at 10 symbols/call) took long enough in wall-clock time
-that by the time a candidate's day-4 confirmation was checked, regular
-trading hours had already ended (`get_equity_quotes` showed
-`last_non_reg_trade_price` with a timestamp after `last_trade_price`,
-i.e. after-hours trading had already started). GOOGL cleared the 1%
-confirmation buffer (+1.12% above today's open) but the signal was
-discovered too late to act on with a same-day market order — a market
-order placed after the close queues for the next regular open instead of
-filling near the confirmed level, which reintroduces the overnight-gap
-risk this strategy's near-close timing was specifically designed to
-avoid (see "Entry timing and confirmation buffer" above).
+**The problem (discovered 2026-10-27):** the universe entry scan (quotes +
+historicals across ~89 tickers, batched at 10 symbols/call) took long
+enough in wall-clock time that by the time a candidate's day-4
+confirmation was checked, regular trading hours had already ended
+(`get_equity_quotes` showed `last_non_reg_trade_price` with a timestamp
+after `last_trade_price`). GOOGL cleared the 1% confirmation buffer
+(+1.12% above today's open) but was discovered too late to act on with a
+same-day market order — a market order placed after the close queues for
+the next regular open instead of filling near the confirmed level, which
+reintroduces the overnight-gap risk this strategy's near-close timing was
+specifically designed to avoid (see "Entry timing and confirmation
+buffer" above).
 
-Rule: before placing an entry order, check whether regular hours are
-still open (a quote with a `last_non_reg_trade_price` timestamp newer
-than `last_trade_price` means they are not). If hours have already
-closed, do NOT place the market buy — record the ticker as "confirmed
-but not executed (scan completed after close)" in the report and let it
-re-qualify from a fresh day-4 check next session. Do not chase it with an
-extended-hours limit order; that changes the execution characteristics
-(wider spreads, thinner liquidity) the strategy wasn't designed around.
-If this keeps happening, the fix is to shrink/parallelize the scan or
-move the trigger earlier, not to improvise an after-hours order.
+**The fix:** the expensive part of the entry scan — fetching 3 days of
+OHLCV across the whole universe to find the 3-red-day pattern — doesn't
+need to happen near the close at all. Day 1/2/3 are always already-settled
+bars by the start of the trading day; only day 4's intraday confirmation
+needs a live check close to the bell. So the work is now split across two
+scheduled triggers:
+
+1. **"NASDAQ Three-Red-Days — Post-Close Scan"** (`CRON_TZ=America/New_York
+   7 8 * * 1-5`, i.e. 8:07am ET every weekday morning, before the open).
+   Scans the full universe (minus currently-held tickers), finds every
+   ticker whose last 3 completed daily bars are red with strictly
+   declining closes, and writes them to `watchlist_state.json` at the repo
+   root:
+   ```json
+   {
+     "as_of_date": "<date of day3>",
+     "generated_at": "<UTC timestamp>",
+     "candidates": [
+       {"ticker": "...", "day1_close": .., "day1_low": .., "day2_close": .., "day2_low": .., "day3_close": .., "day3_low": ..}
+     ]
+   }
+   ```
+   This trigger is data-only — it never places a trade. It commits and
+   pushes the updated file like any other change.
+
+2. **"NASDAQ Three-Red-Days — Pre-Close (Exits + Entry)"** (unchanged
+   schedule, 19:53 UTC): exits/stops/trailing-stop logic is unchanged. For
+   entries, it now reads `watchlist_state.json` instead of re-scanning the
+   universe, and only needs a live quote + today's 30-minute bars for the
+   handful of tickers in that file to check the 1% day-4 buffer — fast
+   enough to never risk running past the bell. `pattern_low` for a
+   confirmed signal = min(day1_low, day2_low, day3_low, today's
+   low-so-far).
+
+Rules that still apply regardless of which trigger is running:
+- If `watchlist_state.json` is missing, empty, or its `as_of_date` is
+  stale (not the most recent completed trading day), the Pre-Close cycle
+  says so plainly and skips entries that cycle — it does NOT fall back to
+  scanning the full universe itself (that would reintroduce the exact
+  timing risk this split exists to avoid).
+- Before placing an entry order, check whether regular hours are still
+  open (a quote with a `last_non_reg_trade_price` timestamp newer than
+  `last_trade_price` means they are not). If hours have already closed,
+  do NOT place the market buy — record the ticker as "confirmed but not
+  executed" in the report and let it re-qualify from a fresh scan rather
+  than chasing it with an off-protocol extended-hours limit order.
 
 ## Daily cycle changes
 

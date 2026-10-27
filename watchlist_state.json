@@ -1,0 +1,25 @@
+{
+  "as_of_date": "2026-10-26",
+  "generated_at": "2026-10-27T20:10:00Z",
+  "note": "Seed file written manually during the 2026-10-27 protocol change (post-close scan not yet automated at the time). Based on the 10/22-10/23-10/26 three-red-day scan already run that day. The first automated Post-Close Scan run (next trading morning) will overwrite this with fresh data before the next Pre-Close cycle reads it.",
+  "candidates": [
+    {
+      "ticker": "GOOGL",
+      "day1_close": 324.22, "day1_low": 322.00,
+      "day2_close": 320.21, "day2_low": 320.18,
+      "day3_close": 316.80, "day3_low": 316.60
+    },
+    {
+      "ticker": "GOOG",
+      "day1_close": 320.76, "day1_low": 318.45,
+      "day2_close": 317.28, "day2_low": 316.9899,
+      "day3_close": 314.19, "day3_low": 313.51
+    },
+    {
+      "ticker": "PCAR",
+      "day1_close": 109.59, "day1_low": 108.25,
+      "day2_close": 106.96, "day2_low": 106.70,
+      "day3_close": 104.37, "day3_low": 103.33
+    }
+  ]
+}
