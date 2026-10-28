@@ -10,10 +10,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 101.04,
+      "stop_loss": 101.37,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6ae101d6-6ffd-4b2b-8936-353eb65b0680"
+      "stop_order_id": "6ae2534c-3ef0-46b2-b97f-e50f5257088d"
     },
     {
       "ticker": "AMGN",
@@ -40,10 +40,10 @@
       "day4_close": 229.2838,
       "entry_price": 229.2838,
       "shares": 2,
-      "stop_loss": 230.51,
+      "stop_loss": 235.21,
       "target_price": 275.14,
       "entry_date": "2026-10-23",
-      "stop_order_id": "6ae101d8-6f72-4044-9232-7e7492dc2cd7"
+      "stop_order_id": "6ae2534d-3a60-41d5-8b80-100d2ab3d195"
     },
     {
       "ticker": "DXCM",
@@ -55,10 +55,55 @@
       "day4_close": 78.5199,
       "entry_price": 78.5199,
       "shares": 6,
-      "stop_loss": 76.52,
+      "stop_loss": 78.05,
       "target_price": 94.22,
       "entry_date": "2026-10-26",
-      "stop_order_id": "6adfb0a1-763f-4ec1-bfe8-f4a214bcdc76"
+      "stop_order_id": "6ae2534e-ff11-48d4-bd01-8b36425f4b1c"
+    },
+    {
+      "ticker": "DLTR",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 125.31,
+      "day2_close": 124.92,
+      "day3_close": 123.65,
+      "day4_close": 127.3399,
+      "entry_price": 127.3399,
+      "shares": 7,
+      "stop_loss": 122.52,
+      "target_price": 152.81,
+      "entry_date": "2026-10-28",
+      "stop_order_id": "6ae2534f-86a6-4a02-a4af-de73b0cd10f7"
+    },
+    {
+      "ticker": "ADBE",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 263.82,
+      "day2_close": 258.62,
+      "day3_close": 248.36,
+      "day4_close": 249.7099,
+      "entry_price": 249.7099,
+      "shares": 4,
+      "stop_loss": 244.25,
+      "target_price": 299.65,
+      "entry_date": "2026-10-28",
+      "stop_order_id": "6ae25350-4b5c-4266-99b4-5f2193d794c6"
+    },
+    {
+      "ticker": "INTU",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 343.39,
+      "day2_close": 339.89,
+      "day3_close": 328.45,
+      "day4_close": 328.4742,
+      "entry_price": 328.4742,
+      "shares": 3,
+      "stop_loss": 324.18,
+      "target_price": 394.17,
+      "entry_date": "2026-10-28",
+      "stop_order_id": "6ae25351-b8f3-4e23-b0ff-5d07ff989564"
     }
   ],
   "closed_positions": [
