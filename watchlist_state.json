@@ -1,20 +1,14 @@
 {
-  "as_of_date": "2026-10-27",
-  "generated_at": "2026-10-28T12:30:00Z",
+  "as_of_date": "2026-10-28",
+  "generated_at": "2026-10-29T12:17:00Z",
   "candidates": [
-    {"ticker": "NFLX", "day1_close": 65.85, "day1_low": 65.78, "day2_close": 63.90, "day2_low": 62.8635, "day3_close": 62.52, "day3_low": 62.48},
-    {"ticker": "PEP", "day1_close": 135.77, "day1_low": 134.66, "day2_close": 135.46, "day2_low": 135.00, "day3_close": 133.50, "day3_low": 132.50},
-    {"ticker": "ADBE", "day1_close": 263.82, "day1_low": 262.78, "day2_close": 258.62, "day2_low": 254.06, "day3_close": 248.36, "day3_low": 247.79},
-    {"ticker": "INTU", "day1_close": 343.39, "day1_low": 342.80, "day2_close": 339.89, "day2_low": 333.49, "day3_close": 328.45, "day3_low": 325.15},
-    {"ticker": "BKNG", "day1_close": 155.83, "day1_low": 155.58, "day2_close": 153.14, "day2_low": 151.35, "day3_close": 150.14, "day3_low": 149.87},
-    {"ticker": "ADP", "day1_close": 304.16, "day1_low": 300.88, "day2_close": 301.12, "day2_low": 298.96, "day3_close": 293.11, "day3_low": 291.415},
-    {"ticker": "MDLZ", "day1_close": 63.80, "day1_low": 63.395, "day2_close": 62.97, "day2_low": 62.665, "day3_close": 62.35, "day3_low": 62.00},
-    {"ticker": "ABNB", "day1_close": 172.01, "day1_low": 171.50, "day2_close": 171.05, "day2_low": 169.265, "day3_close": 168.82, "day3_low": 167.27},
-    {"ticker": "PAYX", "day1_close": 118.04, "day1_low": 116.76, "day2_close": 115.70, "day2_low": 114.53, "day3_close": 109.26, "day3_low": 109.011},
-    {"ticker": "CTSH", "day1_close": 70.54, "day1_low": 69.62, "day2_close": 69.34, "day2_low": 68.20, "day3_close": 66.22, "day3_low": 65.77},
-    {"ticker": "KHC", "day1_close": 24.80, "day1_low": 24.555, "day2_close": 24.73, "day2_low": 24.585, "day3_close": 24.06, "day3_low": 24.06},
-    {"ticker": "TTWO", "day1_close": 203.69, "day1_low": 203.53, "day2_close": 203.35, "day2_low": 199.90, "day3_close": 201.28, "day3_low": 199.60},
-    {"ticker": "CSGP", "day1_close": 33.92, "day1_low": 33.79, "day2_close": 33.70, "day2_low": 33.015, "day3_close": 32.01, "day3_low": 31.87},
-    {"ticker": "DLTR", "day1_close": 125.31, "day1_low": 122.52, "day2_close": 124.92, "day2_low": 122.69, "day3_close": 123.65, "day3_low": 122.93}
+    {"ticker": "META", "day1_close": 630.56, "day1_low": 627.80, "day2_close": 620.19, "day2_low": 619.21, "day3_close": 612.49, "day3_low": 609.00},
+    {"ticker": "CMCSA", "day1_close": 22.05, "day1_low": 21.90, "day2_close": 21.84, "day2_low": 21.71, "day3_close": 21.57, "day3_low": 21.46},
+    {"ticker": "BKNG", "day1_close": 153.14, "day1_low": 151.35, "day2_close": 150.14, "day2_low": 149.87, "day3_close": 147.94, "day3_low": 146.28},
+    {"ticker": "ADP", "day1_close": 301.12, "day1_low": 298.96, "day2_close": 293.11, "day2_low": 291.415, "day3_close": 285.37, "day3_low": 282.7301},
+    {"ticker": "ABNB", "day1_close": 171.05, "day1_low": 169.265, "day2_close": 168.82, "day2_low": 167.27, "day3_close": 166.045, "day3_low": 164.83},
+    {"ticker": "ROST", "day1_close": 234.11, "day1_low": 232.09, "day2_close": 230.09, "day2_low": 227.76, "day3_close": 227.98, "day3_low": 226.69},
+    {"ticker": "TTWO", "day1_close": 203.35, "day1_low": 199.90, "day2_close": 201.28, "day2_low": 199.60, "day3_close": 195.29, "day3_low": 195.03},
+    {"ticker": "CSGP", "day1_close": 33.70, "day1_low": 33.015, "day2_close": 32.01, "day2_low": 31.87, "day3_close": 27.54, "day3_low": 26.855}
   ]
 }
