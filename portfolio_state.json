@@ -10,10 +10,10 @@
       "day4_close": 92.1999,
       "entry_price": 92.1999,
       "shares": 5,
-      "stop_loss": 101.37,
+      "stop_loss": 102.54,
       "target_price": 110.64,
       "entry_date": "2026-10-12",
-      "stop_order_id": "6ae2534c-3ef0-46b2-b97f-e50f5257088d"
+      "stop_order_id": "6ae3a4ec-f9a9-4a61-bdc8-5fad147aba11"
     },
     {
       "ticker": "AMGN",
@@ -25,10 +25,10 @@
       "day4_close": 437.8679,
       "entry_price": 437.8679,
       "shares": 1,
-      "stop_loss": 439.50,
+      "stop_loss": 439.57,
       "target_price": 525.44,
       "entry_date": "2026-10-20",
-      "stop_order_id": "6ae101d7-e2ac-47c8-ae8e-ba340dde0492"
+      "stop_order_id": "6ae3a4ed-3927-4d1c-b538-2eee5201442a"
     },
     {
       "ticker": "LRCX",
@@ -40,10 +40,10 @@
       "day4_close": 229.2838,
       "entry_price": 229.2838,
       "shares": 2,
-      "stop_loss": 235.21,
+      "stop_loss": 244.53,
       "target_price": 275.14,
       "entry_date": "2026-10-23",
-      "stop_order_id": "6ae2534d-3a60-41d5-8b80-100d2ab3d195"
+      "stop_order_id": "6ae3a4ee-8404-4bbe-8a9f-4025f6b43603"
     },
     {
       "ticker": "DXCM",
@@ -70,43 +70,69 @@
       "day4_close": 127.3399,
       "entry_price": 127.3399,
       "shares": 7,
-      "stop_loss": 122.52,
+      "stop_loss": 122.57,
       "target_price": 152.81,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae2534f-86a6-4a02-a4af-de73b0cd10f7"
+      "stop_order_id": "6ae3a4ef-afc0-462e-a0c1-81c4627f7a2d"
     },
+    {
+      "ticker": "CSGP",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 33.70,
+      "day2_close": 32.01,
+      "day3_close": 27.54,
+      "day4_close": 28.0484,
+      "entry_price": 28.0484,
+      "shares": 35,
+      "stop_loss": 26.86,
+      "target_price": 33.66,
+      "entry_date": "2026-10-29",
+      "stop_order_id": "6ae3a4f0-e81d-48c0-8c1b-3160d72b78f3"
+    },
+    {
+      "ticker": "CMCSA",
+      "pattern": "Three Red Days Reversal",
+      "entry_mode": "intraday_probable",
+      "day1_close": 22.05,
+      "day2_close": 21.84,
+      "day3_close": 21.57,
+      "day4_close": 22.2299,
+      "entry_price": 22.2299,
+      "shares": 45,
+      "stop_loss": 21.46,
+      "target_price": 26.68,
+      "entry_date": "2026-10-29",
+      "stop_order_id": "6ae3a4f1-e940-43cc-90d6-c4bb2c3c108b"
+    }
+  ],
+  "closed_positions": [
     {
       "ticker": "ADBE",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 263.82,
-      "day2_close": 258.62,
-      "day3_close": 248.36,
-      "day4_close": 249.7099,
       "entry_price": 249.7099,
+      "exit_price": 243.86,
       "shares": 4,
-      "stop_loss": 244.25,
-      "target_price": 299.65,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae25350-4b5c-4266-99b4-5f2193d794c6"
+      "exit_date": "2026-10-29",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (244.25, set at entry 10/28) filled right at market open at 13:30:02 UTC -- the weak day-4 confirmation (+1.61%) faded overnight and gapped through the stop at the open.",
+      "realized_pnl": -23.4296,
+      "realized_pnl_pct": -2.34
     },
     {
       "ticker": "INTU",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 343.39,
-      "day2_close": 339.89,
-      "day3_close": 328.45,
-      "day4_close": 328.4742,
       "entry_price": 328.4742,
+      "exit_price": 319.61,
       "shares": 3,
-      "stop_loss": 324.18,
-      "target_price": 394.17,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae25351-b8f3-4e23-b0ff-5d07ff989564"
-    }
-  ],
-  "closed_positions": [
+      "exit_date": "2026-10-29",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (324.18, set at entry 10/28) filled right at market open at 13:30:00 UTC. This position's day-4 confirmation (+1.28%) had already faded back toward its own open by the 10/28 close, flagged as a weak confirmation at the time -- it gapped through the stop at today's open.",
+      "realized_pnl": -26.6126,
+      "realized_pnl_pct": -2.70
+    },
     {
       "ticker": "ODFL",
       "pattern": "Three Red Days Reversal",
