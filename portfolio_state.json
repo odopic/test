@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "SBUX",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 93.58,
-      "day2_close": 93.21,
-      "day3_close": 90.75,
-      "day4_close": 92.1999,
-      "entry_price": 92.1999,
-      "shares": 5,
-      "stop_loss": 102.54,
-      "target_price": 110.64,
-      "entry_date": "2026-10-12",
-      "stop_order_id": "6ae3a4ec-f9a9-4a61-bdc8-5fad147aba11"
-    },
-    {
       "ticker": "AMGN",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,25 +10,10 @@
       "day4_close": 437.8679,
       "entry_price": 437.8679,
       "shares": 1,
-      "stop_loss": 439.57,
+      "stop_loss": 457.36,
       "target_price": 525.44,
       "entry_date": "2026-10-20",
-      "stop_order_id": "6ae3a4ed-3927-4d1c-b538-2eee5201442a"
-    },
-    {
-      "ticker": "LRCX",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 263.45,
-      "day2_close": 260.81,
-      "day3_close": 230.15,
-      "day4_close": 229.2838,
-      "entry_price": 229.2838,
-      "shares": 2,
-      "stop_loss": 244.53,
-      "target_price": 275.14,
-      "entry_date": "2026-10-23",
-      "stop_order_id": "6ae3a4ee-8404-4bbe-8a9f-4025f6b43603"
+      "stop_order_id": "6ae4f633-9a90-4e29-b57d-0036d8391c29"
     },
     {
       "ticker": "DXCM",
@@ -55,10 +25,10 @@
       "day4_close": 78.5199,
       "entry_price": 78.5199,
       "shares": 6,
-      "stop_loss": 78.05,
+      "stop_loss": 78.59,
       "target_price": 94.22,
       "entry_date": "2026-10-26",
-      "stop_order_id": "6ae2534e-ff11-48d4-bd01-8b36425f4b1c"
+      "stop_order_id": "6ae4f634-1ee7-4dc9-bc83-22f738c623e7"
     },
     {
       "ticker": "DLTR",
@@ -70,10 +40,10 @@
       "day4_close": 127.3399,
       "entry_price": 127.3399,
       "shares": 7,
-      "stop_loss": 122.57,
+      "stop_loss": 127.52,
       "target_price": 152.81,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae3a4ef-afc0-462e-a0c1-81c4627f7a2d"
+      "stop_order_id": "6ae4f634-ed7c-4e01-b8bd-269f66c596fe"
     },
     {
       "ticker": "CSGP",
@@ -85,10 +55,10 @@
       "day4_close": 28.0484,
       "entry_price": 28.0484,
       "shares": 35,
-      "stop_loss": 26.86,
+      "stop_loss": 27.07,
       "target_price": 33.66,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae3a4f0-e81d-48c0-8c1b-3160d72b78f3"
+      "stop_order_id": "6ae4f635-8807-433e-a949-cbe519a88193"
     },
     {
       "ticker": "CMCSA",
@@ -100,13 +70,39 @@
       "day4_close": 22.2299,
       "entry_price": 22.2299,
       "shares": 45,
-      "stop_loss": 21.46,
+      "stop_loss": 21.80,
       "target_price": 26.68,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae3a4f1-e940-43cc-90d6-c4bb2c3c108b"
+      "stop_order_id": "6ae4f637-e5e1-49e7-9baf-6ffba5152625"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "LRCX",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 229.2838,
+      "exit_price": 239.45,
+      "shares": 2,
+      "entry_date": "2026-10-23",
+      "exit_date": "2026-10-30",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (244.53, ratcheted up on 10/29's cycle) filled right at market open at 13:30:01 UTC -- the stock gapped down hard through the stop (open 245.01 on 10/29 vs today's 13:30 trade at 239.45), but the trailing stop had already locked in most of the run from 229.28 to a high of 257.60 on 10/28. A clean win despite the gap.",
+      "realized_pnl": 20.3324,
+      "realized_pnl_pct": 4.43
+    },
+    {
+      "ticker": "SBUX",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 92.1999,
+      "exit_price": 102.55,
+      "shares": 5,
+      "entry_date": "2026-10-12",
+      "exit_date": "2026-10-30",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (102.54, ratcheted up on 10/29's cycle) filled mid-session at 14:57:14 UTC, right at the stop level. The trailing stop had ratcheted from 98.19 up to 102.54 over many cycles since the 10/12 entry -- a strong, multi-week win.",
+      "realized_pnl": 51.7305,
+      "realized_pnl_pct": 11.23
+    },
     {
       "ticker": "ADBE",
       "pattern": "Three Red Days Reversal",
