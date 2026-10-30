@@ -1,14 +1,9 @@
 {
-  "as_of_date": "2026-10-28",
-  "generated_at": "2026-10-29T12:17:00Z",
+  "as_of_date": "2026-10-29",
+  "generated_at": "2026-10-30T12:22:00Z",
   "candidates": [
-    {"ticker": "META", "day1_close": 630.56, "day1_low": 627.80, "day2_close": 620.19, "day2_low": 619.21, "day3_close": 612.49, "day3_low": 609.00},
-    {"ticker": "CMCSA", "day1_close": 22.05, "day1_low": 21.90, "day2_close": 21.84, "day2_low": 21.71, "day3_close": 21.57, "day3_low": 21.46},
-    {"ticker": "BKNG", "day1_close": 153.14, "day1_low": 151.35, "day2_close": 150.14, "day2_low": 149.87, "day3_close": 147.94, "day3_low": 146.28},
-    {"ticker": "ADP", "day1_close": 301.12, "day1_low": 298.96, "day2_close": 293.11, "day2_low": 291.415, "day3_close": 285.37, "day3_low": 282.7301},
-    {"ticker": "ABNB", "day1_close": 171.05, "day1_low": 169.265, "day2_close": 168.82, "day2_low": 167.27, "day3_close": 166.045, "day3_low": 164.83},
-    {"ticker": "ROST", "day1_close": 234.11, "day1_low": 232.09, "day2_close": 230.09, "day2_low": 227.76, "day3_close": 227.98, "day3_low": 226.69},
-    {"ticker": "TTWO", "day1_close": 203.35, "day1_low": 199.90, "day2_close": 201.28, "day2_low": 199.60, "day3_close": 195.29, "day3_low": 195.03},
-    {"ticker": "CSGP", "day1_close": 33.70, "day1_low": 33.015, "day2_close": 32.01, "day2_low": 31.87, "day3_close": 27.54, "day3_low": 26.855}
+    {"ticker": "MSFT", "day1_close": 531.33, "day1_low": 528.33, "day2_close": 531.01, "day2_low": 526.135, "day3_close": 530.14, "day3_low": 519.56},
+    {"ticker": "NVDA", "day1_close": 217.94, "day1_low": 215.53, "day2_close": 215.38, "day2_low": 214.47, "day3_close": 213.66, "day3_low": 212.08},
+    {"ticker": "TTWO", "day1_close": 201.28, "day1_low": 199.60, "day2_close": 195.29, "day2_low": 195.03, "day3_close": 193.39, "day3_low": 191.58}
   ]
 }
