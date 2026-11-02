@@ -88,6 +88,23 @@ intraday conviction rather than noise. If this proves too strict (skips
 every candidate most days), it can be loosened — but the owner's complaint
 was specifically about entries being too easily won, so err strict for now.
 
+## Pre-Close trigger schedule now DST-proof (changed 2026-11-02)
+
+The Pre-Close trigger's cron was a hardcoded UTC time (`53 19 * * 1-5`),
+set assuming EDT and explicitly flagged as needing a manual hour-shift
+around the Nov/Mar US DST transitions (see above). That manual step was
+missed: the Nov 1, 2026 DST transition (clocks fell back to EST) came and
+went, and by Nov 2 the trigger was still firing at 19:53 UTC — now 2:53pm
+EST, a full hour before the intended 3:53pm, 7-minutes-to-close target.
+Caught and fixed the same day before that cycle ran.
+
+Fix: changed the cron to `CRON_TZ=America/New_York 53 15 * * 1-5` (3:53pm
+ET, named in local time). The scheduler now resolves this to the correct
+UTC offset itself across both DST transitions going forward — no more
+manual twice-a-year updates, and no more silent one-hour drift. The
+Post-Close Scan trigger already used this `CRON_TZ=` form from when it was
+created (2026-10-27) and was unaffected by this transition.
+
 ## Allocation per position: $1,000 (changed 2026-10-26)
 
 `ALLOCATION_PER_POSITION` in `scanner/strategy.py` is now **1000.0** (was
