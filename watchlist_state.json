@@ -1,9 +1,12 @@
 {
-  "as_of_date": "2026-10-29",
-  "generated_at": "2026-10-30T12:22:00Z",
+  "as_of_date": "2026-10-30",
+  "generated_at": "2026-11-02T13:26:00Z",
   "candidates": [
-    {"ticker": "MSFT", "day1_close": 531.33, "day1_low": 528.33, "day2_close": 531.01, "day2_low": 526.135, "day3_close": 530.14, "day3_low": 519.56},
-    {"ticker": "NVDA", "day1_close": 217.94, "day1_low": 215.53, "day2_close": 215.38, "day2_low": 214.47, "day3_close": 213.66, "day3_low": 212.08},
-    {"ticker": "TTWO", "day1_close": 201.28, "day1_low": 199.60, "day2_close": 195.29, "day2_low": 195.03, "day3_close": 193.39, "day3_low": 191.58}
+    {"ticker": "MSFT", "day1_close": 531.01, "day1_low": 526.135, "day2_close": 530.14, "day2_low": 519.56, "day3_close": 521.91, "day3_low": 514.35},
+    {"ticker": "NVDA", "day1_close": 215.38, "day1_low": 214.47, "day2_close": 213.66, "day2_low": 212.08, "day3_close": 204.64, "day3_low": 200.9199},
+    {"ticker": "CSCO", "day1_close": 110.29, "day1_low": 109.4403, "day2_close": 108.59, "day2_low": 108.2798, "day3_close": 104.51, "day3_low": 103.1446},
+    {"ticker": "PCAR", "day1_close": 102.42, "day1_low": 100.495, "day2_close": 102.29, "day2_low": 101.19, "day3_close": 101.91, "day3_low": 101.31},
+    {"ticker": "DDOG", "day1_close": 278.41, "day1_low": 275.49, "day2_close": 265.84, "day2_low": 260.56, "day3_close": 235.27, "day3_low": 228.565},
+    {"ticker": "TTWO", "day1_close": 195.29, "day1_low": 195.03, "day2_close": 193.39, "day2_low": 191.58, "day3_close": 190.17, "day3_low": 183.86}
   ]
 }
