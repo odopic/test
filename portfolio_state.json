@@ -10,10 +10,10 @@
       "day4_close": 437.8679,
       "entry_price": 437.8679,
       "shares": 1,
-      "stop_loss": 457.36,
+      "stop_loss": 465.33,
       "target_price": 525.44,
       "entry_date": "2026-10-20",
-      "stop_order_id": "6ae4f633-9a90-4e29-b57d-0036d8391c29"
+      "stop_order_id": "6ae8f8fb-0787-40fa-b7bd-08815c118204"
     },
     {
       "ticker": "DXCM",
@@ -25,10 +25,10 @@
       "day4_close": 78.5199,
       "entry_price": 78.5199,
       "shares": 6,
-      "stop_loss": 78.59,
+      "stop_loss": 79.79,
       "target_price": 94.22,
       "entry_date": "2026-10-26",
-      "stop_order_id": "6ae4f634-1ee7-4dc9-bc83-22f738c623e7"
+      "stop_order_id": "6ae8f8fc-5e4d-4380-9922-e7db7f30e12a"
     },
     {
       "ticker": "DLTR",
@@ -40,10 +40,10 @@
       "day4_close": 127.3399,
       "entry_price": 127.3399,
       "shares": 7,
-      "stop_loss": 127.52,
+      "stop_loss": 132.30,
       "target_price": 152.81,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae4f634-ed7c-4e01-b8bd-269f66c596fe"
+      "stop_order_id": "6ae8f8fd-e7e5-4402-ac4d-7655f4663447"
     },
     {
       "ticker": "CSGP",
@@ -55,10 +55,10 @@
       "day4_close": 28.0484,
       "entry_price": 28.0484,
       "shares": 35,
-      "stop_loss": 27.07,
+      "stop_loss": 28.36,
       "target_price": 33.66,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae4f635-8807-433e-a949-cbe519a88193"
+      "stop_order_id": "6ae8f8fe-c7bb-47e0-8164-9f1dae5a8205"
     },
     {
       "ticker": "CMCSA",
@@ -70,10 +70,10 @@
       "day4_close": 22.2299,
       "entry_price": 22.2299,
       "shares": 45,
-      "stop_loss": 21.80,
+      "stop_loss": 22.60,
       "target_price": 26.68,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae4f637-e5e1-49e7-9baf-6ffba5152625"
+      "stop_order_id": "6ae8f8ff-3901-4b53-8b5e-1f9677e9b47d"
     }
   ],
   "closed_positions": [
