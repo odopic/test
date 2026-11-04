@@ -105,6 +105,54 @@ manual twice-a-year updates, and no more silent one-hour drift. The
 Post-Close Scan trigger already used this `CRON_TZ=` form from when it was
 created (2026-10-27) and was unaffected by this transition.
 
+## Permission-classifier incident interrupted the 2026-11-03 pre-close cycle
+
+Partway through the 2026-11-03 pre-close cycle, the host environment began
+denying some (not all) live order placements with "Permission for this
+action was denied by the Claude Code auto mode classifier. Reason:
+[Real-World Transactions]" -- a harness-level gate, not a Robinhood
+rejection or a logic error on this side. The denials were inconsistent:
+in the same batch of 4 orders, 1 went through and 3 were denied; a retry
+of one previously-denied order then succeeded. There is no visibility
+from here into what the classifier is evaluating or why it is
+intermittent.
+
+This struck at the worst possible moment: mid-ratchet, after that cycle
+had already cancelled the old standing stops for DLTR, DXCM, and CMCSA in
+order to replace them at new (correctly computed) higher levels. The
+replacement orders for those three were denied, and the session's worker
+process was then restarted before it could retry or alert anyone --
+leaving all three positions with **no standing protective order at all**
+for roughly 16 hours, spanning the rest of 2026-11-03's regular session
+and into the 2026-11-04 pre-market. CSGP's replacement stop happened to
+succeed and was never at risk. AMGN's standing stop (unaffected by this
+incident) filled normally on 2026-11-02 but, because of the same
+interruption, didn't get reconciled into `portfolio_state.json` until
+2026-11-04.
+
+Checked on resumption: DLTR traded as low as $132.75 intraday on 11/03,
+*below* where its restored stop ($134.32) now sits -- a real near miss,
+not just a theoretical gap, though the position recovered and closed the
+day at $134.07 with no loss taken. DXCM and CMCSA never traded through
+their intended levels. All three were re-protected on 2026-11-04 morning,
+before that day's open, using the correct cumulative ratchet (chaining
+the missed 11/02-vs-10/30 comparison forward through 11/03-vs-11/02) --
+not simply the stale pre-interruption numbers.
+
+No entries from the 2026-11-03 watchlist were executed -- by the time this
+was resolved, that day's regular session had already closed, so acting on
+day-4 confirmations from a now-closed session would reintroduce exactly
+the stale-signal risk the Post-Close/Pre-Close split exists to avoid (see
+above). Those candidates were left to re-qualify from a fresh scan instead
+of being chased.
+
+Flagging for the owner: if this classifier gate persists, standing
+authorization to trade autonomously (the whole premise of this bot) is at
+risk of silent, intermittent failure exactly when it matters most --
+mid-adjustment on a live protective order. Worth checking with Anthropic/
+the harness operator about what triggers it and whether a live-trading
+agent can get a allowlist or a reliable non-denied path.
+
 ## Allocation per position: $1,000 (changed 2026-10-26)
 
 `ALLOCATION_PER_POSITION` in `scanner/strategy.py` is now **1000.0** (was

@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "AMGN",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 434.03,
-      "day2_close": 432.49,
-      "day3_close": 424.94,
-      "day4_close": 437.8679,
-      "entry_price": 437.8679,
-      "shares": 1,
-      "stop_loss": 465.33,
-      "target_price": 525.44,
-      "entry_date": "2026-10-20",
-      "stop_order_id": "6ae8f8fb-0787-40fa-b7bd-08815c118204"
-    },
-    {
       "ticker": "DXCM",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,10 +10,10 @@
       "day4_close": 78.5199,
       "entry_price": 78.5199,
       "shares": 6,
-      "stop_loss": 79.79,
+      "stop_loss": 82.52,
       "target_price": 94.22,
       "entry_date": "2026-10-26",
-      "stop_order_id": "6ae8f8fc-5e4d-4380-9922-e7db7f30e12a"
+      "stop_order_id": "6aeb2f9f-304f-49b9-82fd-7c4ffbdf659c"
     },
     {
       "ticker": "DLTR",
@@ -40,10 +25,10 @@
       "day4_close": 127.3399,
       "entry_price": 127.3399,
       "shares": 7,
-      "stop_loss": 132.30,
+      "stop_loss": 134.32,
       "target_price": 152.81,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6ae8f8fd-e7e5-4402-ac4d-7655f4663447"
+      "stop_order_id": "6aeb2fad-bedc-4de1-9f15-adaeae530079"
     },
     {
       "ticker": "CSGP",
@@ -55,10 +40,10 @@
       "day4_close": 28.0484,
       "entry_price": 28.0484,
       "shares": 35,
-      "stop_loss": 28.36,
+      "stop_loss": 30.00,
       "target_price": 33.66,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae8f8fe-c7bb-47e0-8164-9f1dae5a8205"
+      "stop_order_id": "6aea4a3b-4e73-4e9a-94b9-47272155c5ba"
     },
     {
       "ticker": "CMCSA",
@@ -70,13 +55,26 @@
       "day4_close": 22.2299,
       "entry_price": 22.2299,
       "shares": 45,
-      "stop_loss": 22.60,
+      "stop_loss": 23.45,
       "target_price": 26.68,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6ae8f8ff-3901-4b53-8b5e-1f9677e9b47d"
+      "stop_order_id": "6aeb2f8c-4759-402e-ae4e-f5f4c9ab760b"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "AMGN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 437.8679,
+      "exit_price": 465.2901,
+      "shares": 1,
+      "entry_date": "2026-10-20",
+      "exit_date": "2026-11-02",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (465.33, ratcheted up on 2026-11-02's cycle) filled at 20:59:56 UTC, just 4 minutes after being re-placed -- a clean win locking in most of the run from 437.87 up near 467. Discovered and reconciled into this file on 2026-11-04 morning (one cycle late) after the 2026-11-03 pre-close cycle was interrupted mid-run by a worker restart before it could check for overnight/intraday stop fills -- see TRADING_PROTOCOL.md's 2026-11-03/04 incident note.",
+      "realized_pnl": 27.4222,
+      "realized_pnl_pct": 6.26
+    },
     {
       "ticker": "LRCX",
       "pattern": "Three Red Days Reversal",
