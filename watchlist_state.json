@@ -1,15 +1,9 @@
 {
-  "as_of_date": "2026-11-02",
-  "generated_at": "2026-11-03T13:30:00Z",
+  "as_of_date": "2026-11-03",
+  "generated_at": "2026-11-04T13:20:00Z",
   "candidates": [
-    {"ticker": "MSFT", "day1_close": 530.14, "day1_low": 519.56, "day2_close": 521.91, "day2_low": 514.35, "day3_close": 507.12, "day3_low": 504.96},
-    {"ticker": "NVDA", "day1_close": 213.66, "day1_low": 212.08, "day2_close": 204.64, "day2_low": 200.9199, "day3_close": 202.06, "day3_low": 201.66},
-    {"ticker": "GOOGL", "day1_close": 283.82, "day1_low": 280.36, "day2_close": 279.84, "day2_low": 276.92, "day3_close": 278.99, "day3_low": 278.8},
-    {"ticker": "GOOG", "day1_close": 282.32, "day1_low": 278.29, "day2_close": 278.22, "day2_low": 275.35, "day3_close": 278.04, "day3_low": 277.78},
-    {"ticker": "CSCO", "day1_close": 108.59, "day1_low": 108.2798, "day2_close": 104.51, "day2_low": 103.1446, "day3_close": 101.61, "day3_low": 101.41},
-    {"ticker": "CSX", "day1_close": 52.24, "day1_low": 50.98, "day2_close": 51.99, "day2_low": 51.319, "day3_close": 51.62, "day3_low": 51.39},
-    {"ticker": "MRVL", "day1_close": 218.34, "day1_low": 214.5638, "day2_close": 196.4, "day2_low": 190.15, "day3_close": 171.41, "day3_low": 168.52},
-    {"ticker": "DDOG", "day1_close": 265.84, "day1_low": 260.56, "day2_close": 235.27, "day2_low": 228.565, "day3_close": 216.1, "day3_low": 215.73},
-    {"ticker": "TEAM", "day1_close": 204.1, "day1_low": 200.05, "day2_close": 191.72, "day2_low": 188.43, "day3_close": 187.08, "day3_low": 185.74}
+    {"ticker": "PANW", "day1_close": 365.87, "day1_low": 359.7635, "day2_close": 351.72, "day2_low": 350.39, "day3_close": 350.2, "day3_low": 347.28},
+    {"ticker": "CSX", "day1_close": 51.99, "day1_low": 51.319, "day2_close": 51.62, "day2_low": 51.39, "day3_close": 50.72, "day3_low": 50.625},
+    {"ticker": "CDW", "day1_close": 153.79, "day1_low": 144.34, "day2_close": 150.59, "day2_low": 147.89, "day3_close": 149.77, "day3_low": 146.04}
   ]
 }
