@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "DXCM",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 80.26,
-      "day2_close": 78.32,
-      "day3_close": 77.94,
-      "day4_close": 78.5199,
-      "entry_price": 78.5199,
-      "shares": 6,
-      "stop_loss": 82.52,
-      "target_price": 94.22,
-      "entry_date": "2026-10-26",
-      "stop_order_id": "6aeb2f9f-304f-49b9-82fd-7c4ffbdf659c"
-    },
-    {
       "ticker": "DLTR",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,25 +10,10 @@
       "day4_close": 127.3399,
       "entry_price": 127.3399,
       "shares": 7,
-      "stop_loss": 134.32,
+      "stop_loss": 136.09,
       "target_price": 152.81,
       "entry_date": "2026-10-28",
-      "stop_order_id": "6aeb2fad-bedc-4de1-9f15-adaeae530079"
-    },
-    {
-      "ticker": "CSGP",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 33.70,
-      "day2_close": 32.01,
-      "day3_close": 27.54,
-      "day4_close": 28.0484,
-      "entry_price": 28.0484,
-      "shares": 35,
-      "stop_loss": 30.00,
-      "target_price": 33.66,
-      "entry_date": "2026-10-29",
-      "stop_order_id": "6aea4a3b-4e73-4e9a-94b9-47272155c5ba"
+      "stop_order_id": "6aeced18-b041-412d-9eb7-dbea233c095d"
     },
     {
       "ticker": "CMCSA",
@@ -55,13 +25,39 @@
       "day4_close": 22.2299,
       "entry_price": 22.2299,
       "shares": 45,
-      "stop_loss": 23.45,
+      "stop_loss": 24.00,
       "target_price": 26.68,
       "entry_date": "2026-10-29",
-      "stop_order_id": "6aeb2f8c-4759-402e-ae4e-f5f4c9ab760b"
+      "stop_order_id": "6aeced19-1dfa-4249-8450-923f9934b1a2"
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "DXCM",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 78.5199,
+      "exit_price": 84.4156,
+      "shares": 6,
+      "entry_date": "2026-10-26",
+      "exit_date": "2026-11-05",
+      "exit_reason": "stop_loss",
+      "exit_note": "Daily trailing-stop ratchet computed a new level (84.75, from 11/04's low) that was already BELOW the live price's subsequent drop by the time of placement -- the already-breached-level edge case. Cancelled the old resting stop (82.52) and exited via immediate market sell instead of placing a stop already through the money. A clean win locking in most of the run from 78.52 to a high near 89 on 11/04.",
+      "realized_pnl": 35.3542,
+      "realized_pnl_pct": 7.51
+    },
+    {
+      "ticker": "CSGP",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 28.0484,
+      "exit_price": 31.825,
+      "shares": 35,
+      "entry_date": "2026-10-29",
+      "exit_date": "2026-11-05",
+      "exit_reason": "stop_loss",
+      "exit_note": "Daily trailing-stop ratchet computed a new level (32.20, from 11/04's low) that was already BELOW the live price's subsequent drop by the time of placement -- the already-breached-level edge case. Cancelled the old resting stop (30.00) and exited via immediate market sell instead of placing a stop already through the money. A strong win from the elevated-risk 10/29 entry, locking in most of the run from 28.05 to a high near 33.69 on 11/04.",
+      "realized_pnl": 132.151,
+      "realized_pnl_pct": 13.46
+    },
     {
       "ticker": "AMGN",
       "pattern": "Three Red Days Reversal",
