@@ -1,9 +1,7 @@
 {
-  "as_of_date": "2026-11-03",
-  "generated_at": "2026-11-04T13:20:00Z",
+  "as_of_date": "2026-11-04",
+  "generated_at": "2026-11-05T13:15:00Z",
   "candidates": [
-    {"ticker": "PANW", "day1_close": 365.87, "day1_low": 359.7635, "day2_close": 351.72, "day2_low": 350.39, "day3_close": 350.2, "day3_low": 347.28},
-    {"ticker": "CSX", "day1_close": 51.99, "day1_low": 51.319, "day2_close": 51.62, "day2_low": 51.39, "day3_close": 50.72, "day3_low": 50.625},
-    {"ticker": "CDW", "day1_close": 153.79, "day1_low": 144.34, "day2_close": 150.59, "day2_low": 147.89, "day3_close": 149.77, "day3_low": 146.04}
+    {"ticker": "BKR", "day1_close": 53.05, "day1_low": 52.965, "day2_close": 52.79, "day2_low": 52.775, "day3_close": 49.87, "day3_low": 49.25}
   ]
 }
