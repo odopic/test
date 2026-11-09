@@ -1,16 +1,12 @@
 {
-  "as_of_date": "2026-11-05",
-  "generated_at": "2026-11-06T13:20:00Z",
+  "as_of_date": "2026-11-06",
+  "generated_at": "2026-11-09T13:25:00Z",
   "candidates": [
-    {"ticker": "NVDA", "day1_close": 206.69, "day1_low": 205.93, "day2_close": 200.13, "day2_low": 199.68, "day3_close": 181.6, "day3_low": 181.462},
-    {"ticker": "ASML", "day1_close": 1552.14, "day1_low": 1547.01, "day2_close": 1496.3, "day2_low": 1478.9634, "day3_close": 1356.65, "day3_low": 1355.05},
-    {"ticker": "AMAT", "day1_close": 381.92, "day1_low": 378.72, "day2_close": 369.4, "day2_low": 362.93, "day3_close": 319.25, "day3_low": 316.95},
-    {"ticker": "MU", "day1_close": 855.1, "day1_low": 845.25, "day2_close": 795.23, "day2_low": 782.0, "day3_close": 656.39, "day3_low": 650.0},
-    {"ticker": "ADI", "day1_close": 419.79, "day1_low": 417.56, "day2_close": 406.24, "day2_low": 396.755, "day3_close": 361.01, "day3_low": 360.13},
-    {"ticker": "LRCX", "day1_close": 230.72, "day1_low": 228.48, "day2_close": 221.43, "day2_low": 218.5, "day3_close": 185.2, "day3_low": 184.24},
-    {"ticker": "KLAC", "day1_close": 156.2, "day1_low": 154.14, "day2_close": 149.79, "day2_low": 147.385, "day3_close": 129.8, "day3_low": 128.165},
-    {"ticker": "MRVL", "day1_close": 171.97, "day1_low": 167.4, "day2_close": 159.8, "day2_low": 154.78, "day3_close": 133.55, "day3_low": 132.54},
-    {"ticker": "BKR", "day1_close": 52.79, "day1_low": 52.775, "day2_close": 49.87, "day2_low": 49.25, "day3_close": 46.2, "day3_low": 46.085},
-    {"ticker": "MCHP", "day1_close": 77.9, "day1_low": 77.26, "day2_close": 75.34, "day2_low": 73.545, "day3_close": 64.85, "day3_low": 64.0417}
+    {"ticker": "CSCO", "day1_close": 103.61, "day1_low": 101.8195, "day2_close": 95.72, "day2_low": 95.43, "day3_close": 93.85, "day3_low": 93.35},
+    {"ticker": "TXN", "day1_close": 311.49, "day1_low": 303.9, "day2_close": 278.15, "day2_low": 277.866, "day3_close": 277.36, "day3_low": 271.23},
+    {"ticker": "CRWD", "day1_close": 241.0, "day1_low": 237.21, "day2_close": 217.2, "day2_low": 213.22, "day3_close": 216.9, "day3_low": 216.14},
+    {"ticker": "ODFL", "day1_close": 179.39, "day1_low": 174.82, "day2_close": 170.56, "day2_low": 169.885, "day3_close": 164.92, "day3_low": 164.52},
+    {"ticker": "MCHP", "day1_close": 75.34, "day1_low": 73.545, "day2_close": 64.85, "day2_low": 64.0417, "day3_close": 58.35, "day3_low": 54.83},
+    {"ticker": "TEAM", "day1_close": 189.88, "day1_low": 184.8386, "day2_close": 183.29, "day2_low": 180.8127, "day3_close": 153.68, "day3_low": 151.5}
   ]
 }
