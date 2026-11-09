@@ -153,6 +153,26 @@ mid-adjustment on a live protective order. Worth checking with Anthropic/
 the harness operator about what triggers it and whether a live-trading
 agent can get a allowlist or a reliable non-denied path.
 
+## Fractional-share positions cannot carry a standing stop (discovered 2026-11-09)
+
+The sub-$300 fractional-`dollar_amount` rule (below) can produce a position
+sized in fractional shares (e.g. 0.048917 shares of TEAM, from $7.57 of
+remaining cash). Robinhood rejects a `stop_market` order on a fractional
+quantity outright, regardless of `time_in_force`:
+- `time_in_force=gtc` → `400: "Invalid time in force for fractional order."`
+- `time_in_force=gfd` → `400: "Invalid trigger for fractional order."`
+
+There is no working combination found so far -- fractional positions
+apparently cannot get *any* standing stop order on this account. For a
+position this small the dollar exposure is immaterial, but the gap is
+real: such a position has to be watched and exited manually (checked each
+cycle against `stop_loss`/`target_price` like a pre-2026-09-21 position)
+rather than relying on an exchange-side order. If the sub-$300 rule
+produces a larger fractional position in the future, this becomes a more
+meaningful risk -- worth revisiting (e.g. rounding down to whole shares
+instead of using the exact remaining cash, even though that leaves a few
+dollars unspent) if it recurs with real money at stake.
+
 ## Allocation per position: $1,000 (changed 2026-10-26)
 
 `ALLOCATION_PER_POSITION` in `scanner/strategy.py` is now **1000.0** (was
