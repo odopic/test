@@ -40,10 +40,10 @@
       "day4_close": 296.0599,
       "entry_price": 296.0599,
       "shares": 3,
-      "stop_loss": 280.00,
+      "stop_loss": 287.25,
       "target_price": 355.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af384cb-f280-4cad-8693-4c829e0218a8"
+      "stop_order_id": "6af4fe64-af46-4e85-b147-17ffbd494ef4"
     },
     {
       "ticker": "CRWD",
@@ -85,10 +85,10 @@
       "day4_close": 61.2679,
       "entry_price": 61.2679,
       "shares": 14,
-      "stop_loss": 58.56,
+      "stop_loss": 59.75,
       "target_price": 73.52,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af384cc-6467-47cb-9e82-360531fb3a21"
+      "stop_order_id": "6af4fe8a-c3b9-457d-9b4f-73f19c4665d8"
     },
     {
       "ticker": "INTU",
