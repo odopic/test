@@ -1,10 +1,7 @@
 {
-  "as_of_date": "2026-11-09",
-  "generated_at": "2026-11-10T13:20:00Z",
+  "as_of_date": "2026-11-10",
+  "generated_at": "2026-11-11T13:13:00Z",
   "candidates": [
-    {"ticker": "INTU", "day1_close": 354.84, "day1_low": 348.215, "day2_close": 341.5, "day2_low": 334.9, "day3_close": 338.23, "day3_low": 334.42},
-    {"ticker": "ROP", "day1_close": 490.96, "day1_low": 490.885, "day2_close": 476.6, "day2_low": 471.27, "day3_close": 471.64, "day3_low": 465.95},
-    {"ticker": "CTSH", "day1_close": 66.54, "day1_low": 66.0413, "day2_close": 64.72, "day2_low": 63.685, "day3_close": 63.6, "day3_low": 63.29},
-    {"ticker": "KHC", "day1_close": 25.32, "day1_low": 25.025, "day2_close": 24.61, "day2_low": 24.312, "day3_close": 24.42, "day3_low": 24.0701}
+    {"ticker": "KHC", "day1_close": 24.61, "day1_low": 24.312, "day2_close": 24.42, "day2_low": 24.0701, "day3_close": 24.24, "day3_low": 23.95}
   ]
 }
