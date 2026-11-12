@@ -1,7 +1,7 @@
 {
-  "as_of_date": "2026-11-10",
-  "generated_at": "2026-11-11T13:13:00Z",
+  "as_of_date": "2026-11-11",
+  "generated_at": "2026-11-12T13:13:00Z",
   "candidates": [
-    {"ticker": "KHC", "day1_close": 24.61, "day1_low": 24.312, "day2_close": 24.42, "day2_low": 24.0701, "day3_close": 24.24, "day3_low": 23.95}
+    {"ticker": "ABNB", "day1_close": 190.29, "day1_low": 190.26, "day2_close": 186.90, "day2_low": 184.05, "day3_close": 181.13, "day3_low": 178.8031}
   ]
 }
