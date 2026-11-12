@@ -10,10 +10,10 @@
       "day4_close": 47.8899,
       "entry_price": 47.8899,
       "shares": 20,
-      "stop_loss": 47.61,
+      "stop_loss": 48.00,
       "target_price": 57.47,
       "entry_date": "2026-11-06",
-      "stop_order_id": "6af38526-1b72-4eaf-9c0c-5e7fcc4518f7"
+      "stop_order_id": "6af627b5-eecd-48e0-a213-9bbe9ef499da"
     },
     {
       "ticker": "CSCO",
@@ -25,10 +25,10 @@
       "day4_close": 98.7667,
       "entry_price": 98.7667,
       "shares": 10,
-      "stop_loss": 94.97,
+      "stop_loss": 99.63,
       "target_price": 118.52,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af38529-6ec1-43f7-b7a9-aec3eaa0776f"
+      "stop_order_id": "6af627b6-750b-40fd-a361-7b0313d55edb"
     },
     {
       "ticker": "TXN",
@@ -40,10 +40,10 @@
       "day4_close": 296.0599,
       "entry_price": 296.0599,
       "shares": 3,
-      "stop_loss": 287.25,
+      "stop_loss": 303.72,
       "target_price": 355.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af4fe64-af46-4e85-b147-17ffbd494ef4"
+      "stop_order_id": "6af627b7-ae82-470e-b2be-f0c6c27685ea"
     },
     {
       "ticker": "CRWD",
@@ -55,10 +55,10 @@
       "day4_close": 228.6002,
       "entry_price": 228.6002,
       "shares": 4,
-      "stop_loss": 216.25,
+      "stop_loss": 228.39,
       "target_price": 274.32,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af3850e-4bdb-46a9-ada1-f4c2e8056040"
+      "stop_order_id": "6af627b8-8941-4073-835c-faf0635ce75c"
     },
     {
       "ticker": "ODFL",
@@ -70,10 +70,10 @@
       "day4_close": 171.06,
       "entry_price": 171.06,
       "shares": 5,
-      "stop_loss": 165.94,
+      "stop_loss": 166.05,
       "target_price": 205.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af38512-e9e6-444a-9545-7d5799590c97"
+      "stop_order_id": "6af627b9-93df-441b-8c3b-c02f4853e976"
     },
     {
       "ticker": "MCHP",
@@ -85,10 +85,10 @@
       "day4_close": 61.2679,
       "entry_price": 61.2679,
       "shares": 14,
-      "stop_loss": 59.75,
+      "stop_loss": 61.13,
       "target_price": 73.52,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af4fe8a-c3b9-457d-9b4f-73f19c4665d8"
+      "stop_order_id": "6af627ba-6ce8-4125-b976-905c2cc8c29a"
     },
     {
       "ticker": "INTU",
