@@ -16,51 +16,6 @@
       "stop_order_id": "6af627b5-eecd-48e0-a213-9bbe9ef499da"
     },
     {
-      "ticker": "CSCO",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 103.61,
-      "day2_close": 95.72,
-      "day3_close": 93.85,
-      "day4_close": 98.7667,
-      "entry_price": 98.7667,
-      "shares": 10,
-      "stop_loss": 99.63,
-      "target_price": 118.52,
-      "entry_date": "2026-11-09",
-      "stop_order_id": "6af627b6-750b-40fd-a361-7b0313d55edb"
-    },
-    {
-      "ticker": "TXN",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 311.49,
-      "day2_close": 278.15,
-      "day3_close": 277.36,
-      "day4_close": 296.0599,
-      "entry_price": 296.0599,
-      "shares": 3,
-      "stop_loss": 303.72,
-      "target_price": 355.27,
-      "entry_date": "2026-11-09",
-      "stop_order_id": "6af627b7-ae82-470e-b2be-f0c6c27685ea"
-    },
-    {
-      "ticker": "CRWD",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 241.0,
-      "day2_close": 217.2,
-      "day3_close": 216.9,
-      "day4_close": 228.6002,
-      "entry_price": 228.6002,
-      "shares": 4,
-      "stop_loss": 228.39,
-      "target_price": 274.32,
-      "entry_date": "2026-11-09",
-      "stop_order_id": "6af627b8-8941-4073-835c-faf0635ce75c"
-    },
-    {
       "ticker": "ODFL",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -70,25 +25,10 @@
       "day4_close": 171.06,
       "entry_price": 171.06,
       "shares": 5,
-      "stop_loss": 166.05,
+      "stop_loss": 170.60,
       "target_price": 205.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af627b9-93df-441b-8c3b-c02f4853e976"
-    },
-    {
-      "ticker": "MCHP",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 75.34,
-      "day2_close": 64.85,
-      "day3_close": 58.35,
-      "day4_close": 61.2679,
-      "entry_price": 61.2679,
-      "shares": 14,
-      "stop_loss": 61.13,
-      "target_price": 73.52,
-      "entry_date": "2026-11-09",
-      "stop_order_id": "6af627ba-6ce8-4125-b976-905c2cc8c29a"
+      "stop_order_id": "6af77920-0b74-46bf-b9ff-78e38180836b"
     },
     {
       "ticker": "INTU",
@@ -108,6 +48,58 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "CSCO",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 98.7667,
+      "exit_price": 99.62,
+      "shares": 10,
+      "entry_date": "2026-11-09",
+      "exit_date": "2026-11-13",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (99.63, ratcheted up on 2026-11-12's cycle from 11/11's new high) filled at 14:30:10 UTC. The trailing stop had ratcheted above entry by this point, so this is a small win locking in most of the run from 98.77 up near 102.",
+      "realized_pnl": 8.50,
+      "realized_pnl_pct": 0.86
+    },
+    {
+      "ticker": "TXN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 296.0599,
+      "exit_price": 303.48,
+      "shares": 3,
+      "entry_date": "2026-11-09",
+      "exit_date": "2026-11-13",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (303.72, ratcheted up on 2026-11-12's cycle from 11/11's new high) filled at 14:55:43 UTC, a few cents below the stop trigger on the market sell. The trailing stop had ratcheted well above entry, so this is a solid win locking in most of the run from 296.06 up near 314.",
+      "realized_pnl": 22.24,
+      "realized_pnl_pct": 2.51
+    },
+    {
+      "ticker": "CRWD",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 228.6002,
+      "exit_price": 228.43,
+      "shares": 4,
+      "entry_date": "2026-11-09",
+      "exit_date": "2026-11-13",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (228.39, ratcheted up on 2026-11-12's cycle, itself still just below entry) filled at 14:34:09 UTC. Essentially a breakeven exit -- the ratchet hadn't yet cleared entry before the pullback arrived.",
+      "realized_pnl": -0.70,
+      "realized_pnl_pct": -0.07
+    },
+    {
+      "ticker": "MCHP",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 61.2679,
+      "exit_price": 61.13,
+      "shares": 14,
+      "entry_date": "2026-11-09",
+      "exit_date": "2026-11-13",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (61.13, ratcheted up on 2026-11-12's cycle, itself still just below entry) filled at 14:48:08 UTC. Essentially a breakeven exit -- same pattern as CRWD, the ratchet hadn't yet cleared entry before the pullback arrived.",
+      "realized_pnl": -1.95,
+      "realized_pnl_pct": -0.23
+    },
     {
       "ticker": "TEAM",
       "pattern": "Three Red Days Reversal",
