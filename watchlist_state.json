@@ -1,7 +1,8 @@
 {
-  "as_of_date": "2026-11-11",
-  "generated_at": "2026-11-12T13:13:00Z",
+  "as_of_date": "2026-11-13",
+  "generated_at": "2026-11-16T13:20:00Z",
   "candidates": [
-    {"ticker": "ABNB", "day1_close": 190.29, "day1_low": 190.26, "day2_close": 186.90, "day2_low": 184.05, "day3_close": 181.13, "day3_low": 178.8031}
+    {"ticker": "HON", "day1_close": 227.64, "day1_low": 226.58, "day2_close": 223.45, "day2_low": 223.35, "day3_close": 222.46, "day3_low": 219.59},
+    {"ticker": "PANW", "day1_close": 334.47, "day1_low": 329.88, "day2_close": 322.66, "day2_low": 314.79, "day3_close": 322.24, "day3_low": 314.86}
   ]
 }
