@@ -1,21 +1,6 @@
 {
   "open_positions": [
     {
-      "ticker": "BKR",
-      "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 52.79,
-      "day2_close": 49.87,
-      "day3_close": 46.2,
-      "day4_close": 47.8899,
-      "entry_price": 47.8899,
-      "shares": 20,
-      "stop_loss": 48.00,
-      "target_price": 57.47,
-      "entry_date": "2026-11-06",
-      "stop_order_id": "6af627b5-eecd-48e0-a213-9bbe9ef499da"
-    },
-    {
       "ticker": "ODFL",
       "pattern": "Three Red Days Reversal",
       "entry_mode": "intraday_probable",
@@ -25,10 +10,10 @@
       "day4_close": 171.06,
       "entry_price": 171.06,
       "shares": 5,
-      "stop_loss": 170.60,
+      "stop_loss": 171.50,
       "target_price": 205.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6af77920-0b74-46bf-b9ff-78e38180836b"
+      "stop_order_id": "6afb6d91-0ac1-4b8f-b878-6928bbdcf367"
     },
     {
       "ticker": "INTU",
@@ -48,6 +33,19 @@
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "BKR",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 47.8899,
+      "exit_price": 48.00,
+      "shares": 20,
+      "entry_date": "2026-11-06",
+      "exit_date": "2026-11-16",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (48.00, unchanged since 2026-11-12's cycle -- 11/12 made no new high) filled at 15:05:20 UTC in two partial executions. A small win, essentially breakeven-plus, after a ten-day hold.",
+      "realized_pnl": 2.18,
+      "realized_pnl_pct": 0.23
+    },
     {
       "ticker": "CSCO",
       "pattern": "Three Red Days Reversal",
