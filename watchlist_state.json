@@ -1,8 +1,19 @@
 {
-  "as_of_date": "2026-11-13",
-  "generated_at": "2026-11-16T13:20:00Z",
+  "as_of_date": "2026-11-16",
+  "generated_at": "2026-11-17T13:20:00Z",
   "candidates": [
-    {"ticker": "HON", "day1_close": 227.64, "day1_low": 226.58, "day2_close": 223.45, "day2_low": 223.35, "day3_close": 222.46, "day3_low": 219.59},
-    {"ticker": "PANW", "day1_close": 334.47, "day1_low": 329.88, "day2_close": 322.66, "day2_low": 314.79, "day3_close": 322.24, "day3_low": 314.86}
+    {"ticker": "AMZN", "day1_close": 267.44, "day1_low": 267.20, "day2_close": 266.66, "day2_low": 263.91, "day3_close": 257.75, "day3_low": 256.68},
+    {"ticker": "NFLX", "day1_close": 62.69, "day1_low": 62.55, "day2_close": 62.15, "day2_low": 62.12, "day3_close": 60.75, "day3_low": 60.48},
+    {"ticker": "AMGN", "day1_close": 467.06, "day1_low": 466.92, "day2_close": 465.67, "day2_low": 462.22, "day3_close": 462.32, "day3_low": 461.72},
+    {"ticker": "HON", "day1_close": 223.45, "day1_low": 223.35, "day2_close": 222.46, "day2_low": 219.59, "day3_close": 217.95, "day3_low": 217.53},
+    {"ticker": "BKNG", "day1_close": 161.20, "day1_low": 159.00, "day2_close": 159.58, "day2_low": 158.88, "day3_close": 157.53, "day3_low": 156.01},
+    {"ticker": "VRTX", "day1_close": 542.62, "day1_low": 542.51, "day2_close": 538.60, "day2_low": 536.12, "day3_close": 537.79, "day3_low": 534.1175},
+    {"ticker": "PANW", "day1_close": 322.66, "day1_low": 314.79, "day2_close": 322.24, "day2_low": 314.86, "day3_close": 316.09, "day3_low": 311.36},
+    {"ticker": "CTAS", "day1_close": 227.52, "day1_low": 227.33, "day2_close": 226.24, "day2_low": 225.83, "day3_close": 224.16, "day3_low": 223.53},
+    {"ticker": "CSX", "day1_close": 52.40, "day1_low": 52.17, "day2_close": 52.05, "day2_low": 51.945, "day3_close": 52.03, "day3_low": 51.90},
+    {"ticker": "DASH", "day1_close": 172.58, "day1_low": 172.24, "day2_close": 171.51, "day2_low": 169.65, "day3_close": 169.78, "day3_low": 166.74},
+    {"ticker": "ROST", "day1_close": 237.24, "day1_low": 236.195, "day2_close": 231.68, "day2_low": 231.20, "day3_close": 222.99, "day3_low": 222.83},
+    {"ticker": "FAST", "day1_close": 55.55, "day1_low": 55.46, "day2_close": 55.19, "day2_low": 55.03, "day3_close": 55.11, "day3_low": 54.77},
+    {"ticker": "CDW", "day1_close": 172.79, "day1_low": 170.3935, "day2_close": 171.65, "day2_low": 170.50, "day3_close": 165.82, "day3_low": 165.325}
   ]
 }
