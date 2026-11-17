@@ -1,38 +1,32 @@
 {
-  "open_positions": [
+  "open_positions": [],
+  "closed_positions": [
     {
       "ticker": "ODFL",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 179.39,
-      "day2_close": 170.56,
-      "day3_close": 164.92,
-      "day4_close": 171.06,
       "entry_price": 171.06,
+      "exit_price": 171.48,
       "shares": 5,
-      "stop_loss": 171.50,
-      "target_price": 205.27,
       "entry_date": "2026-11-09",
-      "stop_order_id": "6afb6d91-0ac1-4b8f-b878-6928bbdcf367"
+      "exit_date": "2026-11-17",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (171.50, ratcheted up on 2026-11-16's cycle) filled at 16:01:26 UTC. A small win after an 8-day hold.",
+      "realized_pnl": 2.08,
+      "realized_pnl_pct": 0.25
     },
     {
       "ticker": "INTU",
       "pattern": "Three Red Days Reversal",
-      "entry_mode": "intraday_probable",
-      "day1_close": 354.84,
-      "day2_close": 341.5,
-      "day3_close": 338.23,
-      "day4_close": 340.3899,
       "entry_price": 340.3899,
+      "exit_price": 320.505,
       "shares": 0.021328,
-      "stop_loss": 333.72,
-      "target_price": 408.47,
       "entry_date": "2026-11-10",
-      "stop_order_id": null,
-      "note": "Fractional-share position (sub-$300 cash rule, $7.26 remaining -- all of it came from same-cycle TEAM stop-loss exit proceeds). Same platform limitation as TEAM: Robinhood rejects stop_market orders on fractional quantities entirely, so no standing stop could be placed. Position size is small enough (~$7.26) that this is immaterial in dollar terms, but will need a manual check each cycle against stop_loss/target_price until exited."
-    }
-  ],
-  "closed_positions": [
+      "exit_date": "2026-11-17",
+      "exit_reason": "stop_loss",
+      "exit_note": "Fractional position had no standing stop order (platform limitation, documented 2026-11-09 -- Robinhood rejects stop_market on fractional quantities). Manually checked against stop_loss ($333.72) each cycle per protocol; found already trading at $320.78, well below the stop, at the start of today's pre-close cycle (broad market selloff over 11/16-11/17). Sold at market immediately rather than leaving it unprotected further. A real loss this time, unlike TEAM's rounding-error exit -- the position had grown from the original $7.26 to roughly $6.84 by the time of sale, but the percentage move was a genuine -5.84%.",
+      "realized_pnl": -0.42,
+      "realized_pnl_pct": -5.84
+    },
     {
       "ticker": "BKR",
       "pattern": "Three Red Days Reversal",
