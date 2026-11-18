@@ -1,5 +1,46 @@
 {
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticker": "PANW",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 340.2159,
+      "shares": 2,
+      "entry_date": "2026-11-18",
+      "stop_loss": 301.28,
+      "stop_order_id": "6afe12ab-f653-469b-b1fd-56b9fa0b43f5",
+      "target_price": 408.25908
+    },
+    {
+      "ticker": "CRWD",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 237.8249,
+      "shares": 4,
+      "entry_date": "2026-11-18",
+      "stop_loss": 213.65,
+      "stop_order_id": "6afe12ac-4869-4291-b970-73b5050dae9e",
+      "target_price": 285.38988
+    },
+    {
+      "ticker": "IDXX",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 700.05,
+      "shares": 1,
+      "entry_date": "2026-11-18",
+      "stop_loss": 683.72,
+      "stop_order_id": "6afe12ad-7b22-4e09-9e9c-55b1c7634db3",
+      "target_price": 840.06
+    },
+    {
+      "ticker": "CDW",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 169.5426,
+      "shares": 5,
+      "entry_date": "2026-11-18",
+      "stop_loss": 161.03,
+      "stop_order_id": "6afe12ae-6544-414b-bee8-ffe09d1136c3",
+      "target_price": 203.45112
+    }
+  ],
   "closed_positions": [
     {
       "ticker": "ODFL",
