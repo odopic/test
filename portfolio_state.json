@@ -6,8 +6,8 @@
       "entry_price": 340.2159,
       "shares": 2,
       "entry_date": "2026-11-18",
-      "stop_loss": 301.28,
-      "stop_order_id": "6afe12ab-f653-469b-b1fd-56b9fa0b43f5",
+      "stop_loss": 311.63,
+      "stop_order_id": "6aff623c-62b0-41a9-8750-826633570195",
       "target_price": 408.25908
     },
     {
@@ -16,8 +16,8 @@
       "entry_price": 237.8249,
       "shares": 4,
       "entry_date": "2026-11-18",
-      "stop_loss": 213.65,
-      "stop_order_id": "6afe12ac-4869-4291-b970-73b5050dae9e",
+      "stop_loss": 218.51,
+      "stop_order_id": "6aff623d-5e8a-4e6e-800c-64a8ab0cc35a",
       "target_price": 285.38988
     },
     {
