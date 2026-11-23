@@ -6,8 +6,8 @@
       "entry_price": 58.0374,
       "shares": 17,
       "entry_date": "2026-11-20",
-      "stop_loss": 56.20,
-      "stop_order_id": "6b00b40d-a4e5-46fa-a33e-ec2aee0f5cf6",
+      "stop_loss": 56.89,
+      "stop_order_id": "6b04a827-83f0-4cbd-9e32-5dd80dcb164d",
       "target_price": 69.64488
     },
     {
@@ -26,9 +26,50 @@
       "entry_price": 29.54,
       "shares": 33,
       "entry_date": "2026-11-20",
-      "stop_loss": 28.58,
-      "stop_order_id": "6b00b40f-0805-42ac-8ea4-105b0fe890f9",
+      "stop_loss": 28.64,
+      "stop_order_id": "6b04a827-42dc-4487-8045-318e1a1e0dc9",
       "target_price": 35.448
+    },
+    {
+      "ticker": "TSLA",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 385.045,
+      "shares": 2,
+      "entry_date": "2026-11-23",
+      "stop_loss": 344.33,
+      "stop_order_id": "6b04a8b7-7c9e-4731-b9b0-28c2521226ed",
+      "target_price": 462.054
+    },
+    {
+      "ticker": "ADBE",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 224.1283,
+      "shares": 4,
+      "entry_date": "2026-11-23",
+      "stop_loss": 216.95,
+      "stop_order_id": "6b04a8b8-782c-4437-8ae5-f991c60174ed",
+      "target_price": 268.95396
+    },
+    {
+      "ticker": "AZN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 177.315,
+      "shares": 4,
+      "entry_date": "2026-11-23",
+      "stop_loss": 174.03,
+      "stop_order_id": "6b04a8b9-b671-4d1e-a8ac-62174e3c6ad8",
+      "target_price": 212.778
+    },
+    {
+      "ticker": "AMGN",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 449.3965,
+      "shares": 0.308235,
+      "entry_date": "2026-11-23",
+      "stop_loss": 434.51,
+      "stop_order_id": null,
+      "target_price": 539.2758,
+      "note": "Fractional position -- Robinhood rejects stop_market on fractional quantities (platform limitation, documented 2026-11-09). No standing stop order exists. Must be manually checked against stop_loss/target_price every cycle and sold immediately at market if the stop is breached."
     }
   ],
   "closed_positions": [
