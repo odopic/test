@@ -6,19 +6,9 @@
       "entry_price": 58.0374,
       "shares": 17,
       "entry_date": "2026-11-20",
-      "stop_loss": 57.58,
-      "stop_order_id": "6b05f9ad-2445-4208-9e9e-731b5f9cad72",
+      "stop_loss": 58.63,
+      "stop_order_id": "6b074b2b-2c67-4900-9b60-42adcaa357fa",
       "target_price": 69.64488
-    },
-    {
-      "ticker": "TEAM",
-      "pattern": "Three Red Days Reversal",
-      "entry_price": 134.1698,
-      "shares": 7,
-      "entry_date": "2026-11-20",
-      "stop_loss": 136.84,
-      "stop_order_id": "6b05f9ae-634b-40ec-8182-e4a5e9d0387e",
-      "target_price": 161.00376
     },
     {
       "ticker": "CSGP",
@@ -26,19 +16,9 @@
       "entry_price": 29.54,
       "shares": 33,
       "entry_date": "2026-11-20",
-      "stop_loss": 29.32,
-      "stop_order_id": "6b05f9af-32d2-4a42-8005-81d65ea34a53",
+      "stop_loss": 30.11,
+      "stop_order_id": "6b074b2d-eab4-4eaa-820b-a501864d1c30",
       "target_price": 35.448
-    },
-    {
-      "ticker": "TSLA",
-      "pattern": "Three Red Days Reversal",
-      "entry_price": 385.045,
-      "shares": 2,
-      "entry_date": "2026-11-23",
-      "stop_loss": 371.95,
-      "stop_order_id": "6b05f9b0-4b77-4b5e-8f50-c3b5472b50f2",
-      "target_price": 462.054
     },
     {
       "ticker": "ADBE",
@@ -46,8 +26,8 @@
       "entry_price": 224.1283,
       "shares": 4,
       "entry_date": "2026-11-23",
-      "stop_loss": 218.00,
-      "stop_order_id": "6b05f9b1-c046-41a0-9ea4-6b9792987a7d",
+      "stop_loss": 222.44,
+      "stop_order_id": "6b074b2c-9377-4ce6-b6ac-3e6009f768a3",
       "target_price": 268.95396
     },
     {
@@ -56,8 +36,8 @@
       "entry_price": 177.315,
       "shares": 4,
       "entry_date": "2026-11-23",
-      "stop_loss": 174.25,
-      "stop_order_id": "6b05f9b2-dc1d-4b8f-8aa6-cb9108007180",
+      "stop_loss": 178.56,
+      "stop_order_id": "6b074b2e-dcd6-416d-a99e-ca3a0afbc2f7",
       "target_price": 212.778
     },
     {
@@ -66,13 +46,39 @@
       "entry_price": 449.3965,
       "shares": 0.308235,
       "entry_date": "2026-11-23",
-      "stop_loss": 440.00,
+      "stop_loss": 450.00,
       "stop_order_id": null,
       "target_price": 539.2758,
       "note": "Fractional position -- Robinhood rejects stop_market on fractional quantities (platform limitation, documented 2026-11-09). No standing stop order exists. Must be manually checked against stop_loss/target_price every cycle and sold immediately at market if the stop is breached."
     }
   ],
   "closed_positions": [
+    {
+      "ticker": "TSLA",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 385.045,
+      "exit_price": 369.01,
+      "shares": 2,
+      "entry_date": "2026-11-23",
+      "exit_date": "2026-11-25",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (371.95, ratcheted up on 2026-11-24's cycle from 11/23's new high) gapped through at today's market open, filling at 14:30:01 UTC at 369.01 -- below the stop trigger (normal stop_market behavior on a gap down). A short 2-day hold ended in a loss.",
+      "realized_pnl": -32.07,
+      "realized_pnl_pct": -4.17
+    },
+    {
+      "ticker": "TEAM",
+      "pattern": "Three Red Days Reversal",
+      "entry_price": 134.1698,
+      "exit_price": 136.66,
+      "shares": 7,
+      "entry_date": "2026-11-20",
+      "exit_date": "2026-11-25",
+      "exit_reason": "stop_loss",
+      "exit_note": "Standing GTC stop (136.84, ratcheted up on 2026-11-24's cycle from 11/23's new high) gapped through at today's market open, filling at 14:30:01 UTC at 136.66 -- just below the stop trigger. The trailing stop had ratcheted well above entry over the 5-day hold, so this is a modest win locking in most of the run from 134.17 up near 142.",
+      "realized_pnl": 17.4314,
+      "realized_pnl_pct": 1.86
+    },
     {
       "ticker": "PANW",
       "pattern": "Three Red Days Reversal",
