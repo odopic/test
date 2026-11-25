@@ -1,8 +1,5 @@
 {
-  "as_of_date": "2026-11-23",
-  "generated_at": "2026-11-24T13:12:30Z",
-  "candidates": [
-    {"ticker": "CRWD", "day1_close": 243.46, "day1_low": 239.70, "day2_close": 229.44, "day2_low": 227.30, "day3_close": 208.97, "day3_low": 200.53},
-    {"ticker": "MNST", "day1_close": 43.94, "day1_low": 43.762, "day2_close": 43.69, "day2_low": 43.51, "day3_close": 42.43, "day3_low": 42.235}
-  ]
+  "as_of_date": "2026-11-24",
+  "generated_at": "2026-11-25T13:12:00Z",
+  "candidates": []
 }
